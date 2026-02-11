@@ -58,141 +58,92 @@
 
   <style>
     html { scroll-behavior: smooth; }
-    body { overflow-x: hidden; }
-
-    /* Keep mobile from getting that right-side “extra space” from wide elements */
-    .no-overflow-x { overflow-x: hidden; }
-
-    /* Make hero gallery tidy on mobile: one column, equal heights */
-    @media (max-width: 640px) {
-      .hero-gallery {
-        display: grid !important;
-        grid-template-columns: 1fr !important;
-        gap: 12px !important;
-      }
-      .hero-gallery img {
-        height: 220px !important;
-        margin-top: 0 !important;
-      }
-      .hero-gallery .span-2 {
-        grid-column: auto !important;
-      }
-      .hero-gallery .span-2 img {
-        height: 220px !important;
-      }
-    }
   </style>
 </head>
 
-<body class="bg-brand-light text-brand-dark no-overflow-x">
+<body class="bg-brand-light text-brand-dark overflow-x-hidden">
 
-  <!-- NAV (updated to match screenshot style) -->
+  <!-- NAV -->
   <nav class="sticky top-0 bg-white shadow-md z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="h-20 flex items-center justify-between gap-3">
-
-        <!-- Left: icon + brand -->
-        <div class="flex items-center gap-3 min-w-0">
-          <a href="#home" aria-label="Home" class="shrink-0">
-            <div class="w-12 h-12 rounded-2xl bg-emerald-600 flex items-center justify-center shadow-sm">
-              <i class="fas fa-house text-white text-xl"></i>
-            </div>
-          </a>
-
-          <div class="min-w-0">
-            <div class="text-xl sm:text-2xl font-extrabold tracking-tight text-gray-900 whitespace-nowrap">
-              HOME CLEANING <span class="text-emerald-600">&amp;</span> CO
-            </div>
-          </div>
+      <div class="flex justify-between h-20 items-center">
+        <div class="flex items-center gap-2">
+          <img
+            src="https://cdn.grapesjs.com/workspaces/cmlh11fl670ggg8fwp7s7ecks/assets/22ee1970-587d-4e38-bfd5-6a81d39ec2e6__img3529.png"
+            alt="Home Cleaning &amp; Co logo"
+            class="h-14 md:h-12 w-auto"
+          />
+          <span class="text-lg font-bold tracking-tight">
+            HOME CLEANING <span class="text-emerald-600">&amp;</span> CO
+          </span>
         </div>
 
-        <!-- Center: links (desktop/tablet) -->
-        <div class="hidden lg:flex items-center gap-10 text-gray-600 font-semibold">
-          <a href="#home" class="hover:text-gray-900 transition">Home</a>
-          <a href="#services" class="hover:text-gray-900 transition">Services</a>
-          <a href="#quote" class="hover:text-gray-900 transition">Book Online</a>
+        <div class="hidden md:flex items-center gap-6 text-gray-700 font-semibold">
+          <a href="#home" class="hover:text-brand-dark transition">Home</a>
+          <a href="#services" class="hover:text-brand-dark transition">Services</a>
+          <a href="#why" class="hover:text-brand-dark transition">Why Hire Us</a>
+          <a href="#areas" class="hover:text-brand-dark transition">Areas</a>
+          <a href="#faq" class="hover:text-brand-dark transition">FAQ</a>
         </div>
 
-        <!-- Right: phone + book now -->
         <div class="flex items-center gap-3">
-          <a href="tel:9543933479"
-             class="hidden md:inline-flex items-center font-bold text-gray-700 hover:text-gray-900 transition">
-            (954) 393-3479
+          <a href="#quote"
+             class="bg-brand-blue hover:bg-opacity-90 text-white px-5 py-3 rounded-full font-bold transition hidden sm:inline-flex items-center">
+            Get a Quote
           </a>
 
-          <a href="#quote"
-             class="bg-emerald-600 hover:bg-opacity-90 text-white px-6 py-3 rounded-full font-extrabold transition shadow-lg">
-            Book Now
+          <a href="tel:9543933479" aria-label="Call Home Cleaning &amp; Co"
+             class="bg-emerald-600 hover:bg-opacity-90 text-white px-6 py-3 rounded-full font-bold transition flex items-center gap-2">
+            (954) 393-3479
           </a>
         </div>
       </div>
     </div>
   </nav>
 
-  <!-- HERO (updated to match screenshot style, keeps your images on the side) -->
-  <header id="home" class="relative bg-white pt-10 pb-20 lg:pt-16 lg:pb-24 overflow-hidden">
+  <!-- HERO -->
+  <header id="home" class="relative bg-white pt-10 pb-20 lg:pt-20 lg:pb-24 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-12 items-start">
 
-        <!-- Left hero content -->
         <div>
-          <!-- pill -->
-          <div class="inline-flex items-center gap-3 bg-emerald-600/10 text-emerald-700 px-5 py-3 rounded-full mb-8">
-            <span class="w-3 h-3 rounded-full bg-emerald-600"></span>
-            <span class="text-sm sm:text-base font-bold">Now serving St. Petersburg &amp; Tampa Bay</span>
+          <div class="inline-flex items-center gap-2 bg-emerald-600 bg-opacity-10 text-emerald-600 px-4 py-2 rounded-full mb-6">
+            <i class="fas fa-shield-alt text-sm"></i>
+            <span class="text-xs font-bold uppercase tracking-widest">Licensed &amp; Insured • Supplies Included</span>
           </div>
 
-          <!-- headline -->
-          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.02] text-gray-900">
-            Professional Cleaning<br />
-            <span class="text-brand-blue">Made Simple.</span>
+          <h1 class="text-4xl md:text-6xl text-gray-900 leading-tight mb-6">
+            Sparkling Clean Homes in
+            <span class="text-brand-blue">St. Petersburg</span> &amp; Nearby Areas
           </h1>
 
-          <!-- subcopy -->
-          <p class="text-lg sm:text-xl text-gray-600 mt-6 max-w-xl leading-relaxed">
-            Book your professional house cleaning in 60 seconds. Our family-owned team brings the supplies and the smiles.
+          <p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
+            We are <span class="font-semibold text-brand-dark">people</span> + <span class="font-semibold text-brand-dark">service</span> + <span class="font-semibold text-brand-dark">quality</span> you can trust.
+            We treat your home with care, communicate clearly, and give you back time for what matters.
           </p>
 
-          <!-- CTAs -->
-          <div class="mt-10 flex flex-col sm:flex-row gap-5">
-            <a href="#quote"
-               class="w-full sm:w-auto bg-brand-dark text-white px-10 py-5 rounded-2xl text-xl font-extrabold shadow-xl hover:bg-black transition text-center">
-              Book Online Now
+          <div class="flex flex-col sm:flex-row gap-4 mb-8">
+            <a href="tel:9543933479"
+               class="flex-1 bg-brand-dark text-white text-center py-3 rounded-xl text-lg font-bold hover:bg-black transition shadow-xl flex items-center justify-center gap-3">
+              <i class="fas fa-phone"></i> Give Us a Call
             </a>
 
-            <a href="tel:9543933479"
-               class="w-full sm:w-auto bg-white border-2 border-gray-200 text-gray-700 px-10 py-5 rounded-2xl text-xl font-extrabold shadow-sm hover:bg-gray-50 transition flex items-center justify-center gap-3">
-              <i class="fas fa-phone text-gray-400"></i> Call Us
+            <a href="#quote"
+               class="flex-1 bg-brand-blue text-white text-center py-3 rounded-xl text-lg font-bold hover:bg-opacity-90 transition shadow-xl">
+              Get Your Free Estimate
             </a>
           </div>
 
-          <!-- social proof -->
-          <div class="mt-10 flex items-center gap-5">
-            <div class="flex -space-x-3">
-              <img class="w-11 h-11 rounded-full border-2 border-white object-cover"
-                   src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=60"
-                   alt="Customer" />
-              <img class="w-11 h-11 rounded-full border-2 border-white object-cover"
-                   src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=60"
-                   alt="Customer" />
-              <img class="w-11 h-11 rounded-full border-2 border-white object-cover"
-                   src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=60"
-                   alt="Customer" />
+          <div class="flex items-center gap-3 border-t pt-6 border-gray-100">
+            <div class="flex text-yellow-400">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
-
-            <div>
-              <div class="flex text-yellow-400 text-lg">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              </div>
-              <div class="text-gray-500 font-semibold mt-1">
-                Trusted by 500+ Local Families
-              </div>
-            </div>
+            <span class="text-sm font-semibold text-gray-500">Trusted local service • Clear standards • Friendly team</span>
           </div>
         </div>
 
-        <!-- Right: YOUR ORIGINAL IMAGE GALLERY (kept) -->
-        <div class="hero-gallery grid grid-cols-2 gap-4 w-full justify-items-stretch">
+        <!-- Hero gallery -->
+        <div class="grid grid-cols-2 gap-4 w-full justify-items-stretch">
           <img
             src="/images/living-room.jpg"
             alt="Living area cleaning"
@@ -203,7 +154,7 @@
             alt="Kitchen cleaning"
             class="rounded-2xl shadow-lg h-64 w-full object-cover"
           />
-          <div class="span-2 col-span-2 relative">
+          <div class="col-span-2 relative">
             <img
               src="/images/bathroom.jpg"
               alt="Bathroom deep clean"
@@ -217,7 +168,8 @@
     </div>
   </header>
 
-  <!-- TRUST BAR (unchanged) -->
+  <!-- TRUST BAR -->
+  <!-- Desktop stays identical. Mobile fits 4 items with no horizontal scroll (smaller icon/text). -->
   <section class="bg-emerald-600 py-3 md:py-10">
     <div class="max-w-7xl mx-auto px-4">
       <div class="grid grid-cols-4 md:grid md:grid-cols-4 gap-2 md:gap-8 text-center text-white">
@@ -241,7 +193,7 @@
     </div>
   </section>
 
-  <!-- SERVICES (unchanged) -->
+  <!-- SERVICES -->
   <section id="services" class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-16">
@@ -311,7 +263,7 @@
     </div>
   </section>
 
-  <!-- WHY HIRE US (unchanged) -->
+  <!-- WHY HIRE US -->
   <section id="why" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4">
       <div class="grid lg:grid-cols-2 gap-12 items-start">
@@ -373,7 +325,7 @@
     </div>
   </section>
 
-  <!-- AREAS (unchanged) -->
+  <!-- AREAS WE SERVE -->
   <section id="areas" class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-12">
@@ -403,7 +355,7 @@
     </div>
   </section>
 
-  <!-- QUOTE FORM (unchanged from your latest paste) -->
+  <!-- QUOTE FORM (NETLIFY FORMS) -->
   <section id="quote" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4">
       <div class="max-w-6xl mx-auto">
@@ -417,6 +369,7 @@
               <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
             </p>
 
+            <!-- Row 1 -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
               <input name="full_name" required type="text" placeholder="First &amp; Last Name"
                 class="w-full bg-white border border-gray-200 rounded-xl py-3 px-5 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-mint" />
@@ -424,6 +377,7 @@
                 class="w-full bg-white border border-gray-200 rounded-xl py-3 px-5 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-mint" />
             </div>
 
+            <!-- Row 2 -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
               <select name="bedrooms" required
                 class="w-full bg-white border border-gray-200 rounded-xl py-3 px-5 text-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-brand-mint">
@@ -438,6 +392,7 @@
               </select>
             </div>
 
+            <!-- Cleanliness dropdown -->
             <div class="bg-brand-light rounded-2xl border border-gray-100 p-5">
               <label class="block font-bold text-gray-800 mb-3">Can you help us rate your home?</label>
               <select name="condition" required
@@ -480,7 +435,7 @@
     </div>
   </section>
 
-  <!-- FAQ (unchanged) -->
+  <!-- FAQ -->
   <section id="faq" class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-12">
@@ -522,7 +477,7 @@
     </div>
   </section>
 
-  <!-- FOOTER (unchanged) -->
+  <!-- FOOTER -->
   <footer class="bg-gray-100 py-12 text-center">
     <p class="font-bold text-brand-dark mb-2">HOME CLEANING &amp; CO</p>
     <p class="text-gray-500 text-sm mb-3">Residential cleaning across Tampa Bay • Supplies included • Licensed &amp; insured</p>
@@ -534,7 +489,7 @@
     <p class="text-gray-400 text-[10px] uppercase tracking-widest">© 2026 Home Cleaning &amp; Co. All Rights Reserved.</p>
   </footer>
 
-  <!-- Sticky Mobile CTA (unchanged) -->
+  <!-- Sticky Mobile CTA -->
   <div class="sm:hidden fixed bottom-4 left-4 right-4 z-50">
     <div class="max-w-md mx-auto">
       <a href="#quote" class="flex bg-emerald-600 text-white items-center justify-center py-3 rounded-full shadow-2xl font-black text-xl gap-3">
@@ -542,6 +497,5 @@
       </a>
     </div>
   </div>
-
 </body>
 </html>
