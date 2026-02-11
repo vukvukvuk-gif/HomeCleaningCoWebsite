@@ -168,27 +168,37 @@
     </div>
   </header>
 
-  <!-- TRUST BAR -->
-  <section class="bg-emerald-600 py-10">
-    <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
-      <div class="flex flex-col items-center">
-        <i class="fas fa-shield-alt text-3xl mb-3"></i>
-        <p class="font-bold">Licensed &amp; Insured</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <i class="fas fa-spray-can-sparkles text-3xl mb-3"></i>
-        <p class="font-bold">Supplies Included</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <i class="fas fa-bolt text-3xl mb-3"></i>
-        <p class="font-bold">Fast Quotes</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <i class="fas fa-smile text-3xl mb-3"></i>
-        <p class="font-bold">Satisfaction Guaranteed</p>
+    <!-- TRUST BAR -->
+  <section class="bg-emerald-600 py-4 md:py-10">
+    <div class="max-w-7xl mx-auto px-4">
+
+      <!-- Mobile = horizontal | Desktop = original grid -->
+      <div class="flex md:grid md:grid-cols-4 gap-6 md:gap-8 text-center text-white overflow-x-auto md:overflow-visible whitespace-nowrap md:whitespace-normal">
+
+        <div class="flex flex-col items-center min-w-[130px] md:min-w-0">
+          <i class="fas fa-shield-alt text-2xl md:text-3xl mb-1 md:mb-3"></i>
+          <p class="font-bold text-sm md:text-base">Licensed &amp; Insured</p>
+        </div>
+
+        <div class="flex flex-col items-center min-w-[130px] md:min-w-0">
+          <i class="fas fa-spray-can-sparkles text-2xl md:text-3xl mb-1 md:mb-3"></i>
+          <p class="font-bold text-sm md:text-base">Supplies Included</p>
+        </div>
+
+        <div class="flex flex-col items-center min-w-[130px] md:min-w-0">
+          <i class="fas fa-bolt text-2xl md:text-3xl mb-1 md:mb-3"></i>
+          <p class="font-bold text-sm md:text-base">Fast Quotes</p>
+        </div>
+
+        <div class="flex flex-col items-center min-w-[150px] md:min-w-0">
+          <i class="fas fa-smile text-2xl md:text-3xl mb-1 md:mb-3"></i>
+          <p class="font-bold text-sm md:text-base">Satisfaction Guaranteed</p>
+        </div>
+
       </div>
     </div>
   </section>
+
 
   <!-- SERVICES -->
   <section id="services" class="py-20 bg-gray-50">
