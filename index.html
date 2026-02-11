@@ -58,6 +58,25 @@
 
   <style>
     html { scroll-behavior: smooth; }
+
+    /* Scroll reveal animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 700ms ease, transform 700ms ease;
+      will-change: opacity, transform;
+    }
+    .reveal.reveal-active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
   </style>
 </head>
 
@@ -170,7 +189,7 @@
 
   <!-- TRUST BAR -->
   <!-- Desktop stays identical. Mobile fits 4 items with no horizontal scroll (smaller icon/text). -->
-  <section class="bg-emerald-600 py-3 md:py-10">
+  <section class="bg-emerald-600 py-3 md:py-10 reveal">
     <div class="max-w-7xl mx-auto px-4">
       <div class="grid grid-cols-4 md:grid md:grid-cols-4 gap-2 md:gap-8 text-center text-white">
         <div class="flex flex-col items-center min-w-0">
@@ -194,7 +213,7 @@
   </section>
 
   <!-- SERVICES -->
-  <section id="services" class="py-20 bg-gray-50">
+  <section id="services" class="py-20 bg-gray-50 reveal">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-16">
         <h2 class="text-4xl font-bold mb-4">Our Cleaning Services</h2>
@@ -264,7 +283,7 @@
   </section>
 
   <!-- WHY HIRE US -->
-  <section id="why" class="py-20 bg-white">
+  <section id="why" class="py-20 bg-white reveal">
     <div class="max-w-7xl mx-auto px-4">
       <div class="grid lg:grid-cols-2 gap-12 items-start">
         <div>
@@ -326,7 +345,7 @@
   </section>
 
   <!-- AREAS WE SERVE -->
-  <section id="areas" class="py-20 bg-gray-50">
+  <section id="areas" class="py-20 bg-gray-50 reveal">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-12">
         <h2 class="text-4xl font-bold mb-3">Areas We Serve</h2>
@@ -356,7 +375,7 @@
   </section>
 
   <!-- QUOTE FORM (NETLIFY FORMS) -->
-  <section id="quote" class="py-20 bg-white">
+  <section id="quote" class="py-20 bg-white reveal">
     <div class="max-w-7xl mx-auto px-4">
       <div class="max-w-6xl mx-auto">
         <h2 class="text-5xl md:text-6xl font-extrabold tracking-tight text-brand-dark">Get a Quote</h2>
@@ -436,7 +455,7 @@
   </section>
 
   <!-- FAQ -->
-  <section id="faq" class="py-20 bg-gray-50">
+  <section id="faq" class="py-20 bg-gray-50 reveal">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-12">
         <h2 class="text-4xl font-bold mb-3">Frequently Asked Questions</h2>
@@ -478,7 +497,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-gray-100 py-12 text-center">
+  <footer class="bg-gray-100 py-12 text-center reveal">
     <p class="font-bold text-brand-dark mb-2">HOME CLEANING &amp; CO</p>
     <p class="text-gray-500 text-sm mb-3">Residential cleaning across Tampa Bay • Supplies included • Licensed &amp; insured</p>
     <p class="text-gray-600 text-sm mb-2">
@@ -497,5 +516,51 @@
       </a>
     </div>
   </div>
+
+  <script>
+    (function () {
+      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function activate(el) {
+        el.classList.add('reveal-active');
+      }
+
+      if (prefersReduced) {
+        document.querySelectorAll('.reveal').forEach(activate);
+        return;
+      }
+
+      const els = Array.from(document.querySelectorAll('.reveal'));
+
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                activate(entry.target);
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { root: null, threshold: 0.12, rootMargin: '0px 0px -10% 0px' }
+        );
+
+        els.forEach(el => io.observe(el));
+      } else {
+        // Fallback for older browsers
+        function onScroll() {
+          const windowH = window.innerHeight || document.documentElement.clientHeight;
+          els.forEach(el => {
+            if (el.classList.contains('reveal-active')) return;
+            const top = el.getBoundingClientRect().top;
+            if (top < windowH - 100) activate(el);
+          });
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('load', onScroll);
+        onScroll();
+      }
+    })();
+  </script>
 </body>
 </html>
