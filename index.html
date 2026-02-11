@@ -374,7 +374,15 @@
                 class="w-full bg-white border border-gray-200 rounded-xl py-3 px-5 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-mint" />
             </div>
 
-            <!-- Row 2 -->
+            <!-- NEW Row 2: Phone + Email -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <input name="phone" required type="tel" placeholder="Phone Number"
+                class="w-full bg-white border border-gray-200 rounded-xl py-3 px-5 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-mint" />
+              <input name="email" required type="email" placeholder="Email Address"
+                class="w-full bg-white border border-gray-200 rounded-xl py-3 px-5 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-mint" />
+            </div>
+
+            <!-- Row 3 -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
               <select name="bedrooms" required
                 class="w-full bg-white border border-gray-200 rounded-xl py-3 px-5 text-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-brand-mint">
@@ -386,6 +394,22 @@
                 class="w-full bg-white border border-gray-200 rounded-xl py-3 px-5 text-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-brand-mint">
                 <option value="" disabled selected>Bathrooms</option>
                 <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option>
+              </select>
+            </div>
+
+            <!-- NEW Row 4: Type of cleaning -->
+            <div>
+              <select name="cleaning_type" required
+                class="w-full bg-white border border-gray-200 rounded-xl py-3 px-5 text-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-brand-mint">
+                <option value="" disabled selected>Type of cleaning</option>
+                <option>Residential Recurring - Weekly</option>
+                <option>Residential Recurring - Bi-Weekly</option>
+                <option>Residential Recurring - Monthly</option>
+                <option>Residential 1-time Deep</option>
+                <option>Residential Move-in/Move-out</option>
+                <option>A La Carte</option>
+                <option>Commercial - Office, Retail, Building</option>
+                <option>Post Construction Cleaning</option>
               </select>
             </div>
 
@@ -416,11 +440,15 @@
             </div>
           </form>
 
+          <!-- Hidden form for Netlify detection -->
           <form name="quote" data-netlify="true" netlify-honeypot="bot-field" hidden>
             <input type="text" name="full_name" />
             <input type="text" name="address" />
+            <input type="text" name="phone" />
+            <input type="email" name="email" />
             <input type="text" name="bedrooms" />
             <input type="text" name="bathrooms" />
+            <input type="text" name="cleaning_type" />
             <input type="text" name="condition" />
           </form>
 
