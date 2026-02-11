@@ -67,15 +67,19 @@
     <div class="flex justify-between h-20 items-center">
 
       <div class="flex items-center gap-2">
-        <img src="https://cdn.grapesjs.com/workspaces/cmlh11fl670ggg8fwp7s7ecks/assets/22ee1970-587d-4e38-bfd5-6a81d39ec2e6__img3529.png"
-             class="h-12 w-auto"/>
-        <span class="text-lg font-bold">HOME CLEANING <span class="text-emerald-600">&amp;</span> CO</span>
+        <img
+          src="https://cdn.grapesjs.com/workspaces/cmlh11fl670ggg8fwp7s7ecks/assets/22ee1970-587d-4e38-bfd5-6a81d39ec2e6__img3529.png"
+          class="h-12 w-auto"
+        />
+        <span class="text-lg font-bold tracking-tight">
+          HOME CLEANING <span class="text-emerald-600">&amp;</span> CO
+        </span>
       </div>
 
-      <div class="hidden md:flex gap-6 font-semibold text-gray-700">
+      <div class="hidden md:flex items-center gap-6 text-gray-700 font-semibold">
         <a href="#home">Home</a>
         <a href="#services">Services</a>
-        <a href="#why">Why</a>
+        <a href="#why">Why Hire Us</a>
         <a href="#areas">Areas</a>
         <a href="#faq">FAQ</a>
       </div>
@@ -90,60 +94,56 @@
 </nav>
 
 <!-- HERO -->
-<header id="home" class="pt-20 pb-24 bg-white">
-  <div class="max-w-7xl mx-auto px-4">
+<header id="home" class="relative bg-white pt-10 pb-20 lg:pt-20 lg:pb-24 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <div class="grid lg:grid-cols-2 gap-12 items-start">
 
       <div>
-        <h1 class="text-5xl font-bold mb-6">
-          Sparkling Clean Homes in St. Petersburg
+        <h1 class="text-4xl md:text-6xl text-gray-900 mb-6">
+          Sparkling Clean Homes in
+          <span class="text-brand-blue">St. Petersburg</span>
         </h1>
 
         <p class="text-lg text-gray-600 mb-8">
-          Trusted residential cleaning with care, quality, and consistency.
+          Trusted residential cleaning with care and consistency.
         </p>
-
-        <div class="flex gap-4 mb-8">
-          <a href="tel:9543933479"
-             class="bg-brand-dark text-white px-6 py-3 rounded-xl font-bold">
-            Call Now
-          </a>
-
-          <a href="#quote"
-             class="bg-brand-blue text-white px-6 py-3 rounded-xl font-bold">
-            Free Estimate
-          </a>
-        </div>
       </div>
 
-      <!-- FIXED PHOTO SECTION -->
-      <div class="grid grid-cols-2 gap-4">
+      <!-- ✅ FIXED IMAGES -->
+      <div class="grid grid-cols-2 gap-4 w-full justify-items-stretch">
 
-        <img src="./images/living-room.jpg"
-             class="rounded-2xl shadow-lg h-64 w-full object-cover mt-8"
-             alt="Living Room Cleaning"/>
+        <img
+          src="/images/living-room.jpg"
+          alt="Living area cleaning"
+          class="rounded-2xl shadow-lg h-64 w-full object-cover mt-8"
+        />
 
-        <img src="./images/kitchen.jpg"
-             class="rounded-2xl shadow-lg h-64 w-full object-cover"
-             alt="Kitchen Cleaning"/>
+        <img
+          src="/images/kitchen.jpg"
+          alt="Kitchen cleaning"
+          class="rounded-2xl shadow-lg h-64 w-full object-cover"
+        />
 
-        <div class="col-span-2">
-          <img src="./images/bathroom.jpg"
-               class="rounded-2xl shadow-lg h-48 w-full object-cover"
-               alt="Bathroom Cleaning"/>
+        <div class="col-span-2 relative">
+          <img
+            src="/images/bathroom.jpg"
+            alt="Bathroom deep clean"
+            class="rounded-2xl shadow-lg h-48 w-full object-cover"
+          />
+          <div class="absolute inset-0 bg-emerald-600 bg-opacity-10 rounded-2xl"></div>
         </div>
 
       </div>
-      <!-- END FIX -->
+      <!-- ✅ END FIX -->
 
     </div>
   </div>
 </header>
 
-<footer class="bg-gray-100 py-10 text-center">
+<footer class="bg-gray-100 py-12 text-center">
   <p class="font-bold">HOME CLEANING &amp; CO</p>
-  <p class="text-sm text-gray-500">© 2026 All Rights Reserved</p>
+  <p class="text-gray-500 text-sm">© 2026 All Rights Reserved</p>
 </footer>
 
 </body>
