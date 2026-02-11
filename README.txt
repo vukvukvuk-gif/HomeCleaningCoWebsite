@@ -1,60 +1,64 @@
-# Home Cleaning & Co Website (Netlify Forms)
+# Home Cleaning & Co — Website & Project Showcase
 
-## Deploy
-Upload this folder to Netlify (drag-and-drop or Git).
+Professional residential cleaning services with real project examples.
 
-## Forms
+This repository contains the website files and a visual portfolio of completed work.
+
+---
+
+## 🚀 Deployment (Netlify)
+
+This site uses Netlify for hosting and form handling.
+
+### Deploy
+Upload this folder to Netlify (drag-and-drop or Git integration).
+
+### Forms
 This site uses Netlify Forms.
-After deploy, submit a test quote request once.
-Then go to: Netlify Site -> Forms -> 'quote'
+
+After deployment:
+1. Submit a test quote request
+2. Go to: Netlify → Site → Forms → "quote"
 
 Enable email notifications:
-Netlify -> Forms -> Settings/Notifications -> Email notifications.
-
-## Contact
-Phone: (954) 393-3479
-Email: support@homecleaningco.com
-Hours: 7am–8pm
-Satisfaction policy: contact within 24 hours for re-clean of specific areas.
-# Home Cleaning & Property Showcase
-
-Professional residential cleaning and maintenance results.
-
-This repository highlights real examples of completed work, including living areas, kitchens, and bathrooms.
+Netlify → Forms → Settings → Notifications → Email
 
 ---
 
-## 🛋️ Living Room
+## 🏠 Project Gallery
 
+### 🛋️ Living Room
 ![Living Room](images/living-room.jpg)
 
-Clean, organized, and refreshed living space with natural lighting and polished floors.
+Clean, organized, and refreshed living space with polished floors and natural lighting.
 
 ---
 
-## 🍽️ Kitchen
-
+### 🍽️ Kitchen
 ![Kitchen](images/kitchen.jpg)
 
 Deep-cleaned kitchen featuring spotless countertops, appliances, and cabinets.
 
 ---
 
-## 🚿 Bathroom
-
+### 🚿 Bathroom
 ![Bathroom](images/bathroom.jpg)
 
 Sanitized bathroom with detailed tile, glass, and fixture cleaning.
 
 ---
 
-## 📞 Contact
+## 📞 Contact Information
 
-For inquiries, quotes, or bookings:
+For quotes, bookings, and inquiries:
 
-- 📍 Serving Local Areas
-- 📧 Email: your-email@example.com
-- 📱 Phone: (XXX) XXX-XXXX
+- 📱 Phone: (954) 393-3479  
+- 📧 Email: support@homecleaningco.com  
+- ⏰ Hours: 7:00 AM – 8:00 PM  
+- 📍 Serving Local Areas  
+
+### Satisfaction Policy
+If you’re not satisfied, contact us within 24 hours for a free re-clean of specific areas.
 
 ---
 
