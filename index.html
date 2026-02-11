@@ -141,26 +141,23 @@
           </div>
         </div>
 
-        <!-- Hero gallery -->
+        <!-- Hero gallery (YOUR REAL PHOTOS) -->
         <div class="grid grid-cols-2 gap-4 w-full justify-items-stretch">
           <img
-            src="images/hero1.jpg"
+            src="images/hero1.jpeg"
             alt="Living area cleaning"
             class="rounded-2xl shadow-lg h-64 w-full object-cover mt-8"
-            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1581578731548-c64695ce6958?auto=format&fit=crop&w=1200&q=80';"
           />
           <img
-            src="images/hero2.jpg"
-            alt="Bathroom deep clean"
+            src="images/hero2.jpeg"
+            alt="Kitchen cleaning"
             class="rounded-2xl shadow-lg h-64 w-full object-cover"
-            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80';"
           />
           <div class="col-span-2 relative">
             <img
-              src="images/hero3.jpg"
-              alt="Kitchen cleaning"
+              src="images/hero3.jpeg"
+              alt="Bathroom deep clean"
               class="rounded-2xl shadow-lg h-48 w-full object-cover"
-              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1400&q=80';"
             />
             <div class="absolute inset-0 bg-emerald-600 bg-opacity-10 rounded-2xl"></div>
           </div>
@@ -362,32 +359,26 @@
         <p class="text-lg text-gray-500 mt-3">Tell us a bit about your home — we’ll reach out fast during business hours.</p>
 
         <div class="mt-10 bg-white rounded-3xl shadow-xl border border-gray-100 p-6 md:p-8">
-          <!-- NOTE: Netlify forms only submit when the site is hosted -->
           <form name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html" class="space-y-6">
             <input type="hidden" name="form-name" value="quote" />
             <p class="hidden">
               <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
             </p>
 
-            <!-- Row 1 -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
               <input name="full_name" required type="text" placeholder="First &amp; Last Name"
                 class="w-full bg-white border border-gray-200 rounded-xl py-3 px-5 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-mint" />
-
               <input name="address" required type="text" placeholder="Home Address"
                 class="w-full bg-white border border-gray-200 rounded-xl py-3 px-5 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-mint" />
             </div>
 
-            <!-- Row 1.5 (NEW): Phone + Email -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
               <input name="phone" required type="tel" placeholder="Phone Number"
                 class="w-full bg-white border border-gray-200 rounded-xl py-3 px-5 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-mint" />
-
               <input name="email" required type="email" placeholder="Email Address"
                 class="w-full bg-white border border-gray-200 rounded-xl py-3 px-5 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-mint" />
             </div>
 
-            <!-- Row 2 -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
               <select name="bedrooms" required
                 class="w-full bg-white border border-gray-200 rounded-xl py-3 px-5 text-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-brand-mint">
@@ -402,7 +393,6 @@
               </select>
             </div>
 
-            <!-- Cleanliness dropdown -->
             <div class="bg-brand-light rounded-2xl border border-gray-100 p-5">
               <label class="block font-bold text-gray-800 mb-3">Can you help us rate your home?</label>
               <select name="condition" required
@@ -429,7 +419,6 @@
             </div>
           </form>
 
-          <!-- Netlify hidden form fields detector -->
           <form name="quote" data-netlify="true" netlify-honeypot="bot-field" hidden>
             <input type="text" name="full_name" />
             <input type="text" name="address" />
@@ -498,7 +487,6 @@
     <p class="font-bold text-brand-dark mb-2">HOME CLEANING &amp; CO</p>
     <p class="text-gray-500 text-sm mb-3">Residential cleaning • Supplies included • Licensed &amp; insured</p>
 
-    <!-- Email + Phone at very bottom (visible text) -->
     <p class="text-gray-700 text-sm font-semibold">
       <a class="text-brand-blue underline" href="mailto:support@housecleaningco.com">support@housecleaningco.com</a>
     </p>
