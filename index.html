@@ -58,25 +58,6 @@
 
   <style>
     html { scroll-behavior: smooth; }
-
-    /* Scroll reveal animation */
-    .reveal {
-      opacity: 0;
-      transform: translateY(32px);
-      transition: opacity 700ms ease, transform 700ms ease;
-      will-change: opacity, transform;
-    }
-    .reveal.reveal-active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .reveal {
-        opacity: 1 !important;
-        transform: none !important;
-        transition: none !important;
-      }
-    }
   </style>
 </head>
 
@@ -86,17 +67,13 @@
   <nav class="sticky top-0 bg-white shadow-md z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-20 items-center">
-
-        <!-- MOBILE: remove logo image + keep only one clean brand line
-             DESKTOP: keep logo exactly as before -->
         <div class="flex items-center gap-2">
           <img
             src="https://cdn.grapesjs.com/workspaces/cmlh11fl670ggg8fwp7s7ecks/assets/22ee1970-587d-4e38-bfd5-6a81d39ec2e6__img3529.png"
             alt="Home Cleaning &amp; Co logo"
-            class="hidden md:block h-12 w-auto"
+            class="h-14 md:h-12 w-auto"
           />
-
-          <span class="font-extrabold tracking-tight text-[15px] sm:text-lg whitespace-nowrap leading-none">
+          <span class="text-lg font-bold tracking-tight">
             HOME CLEANING <span class="text-emerald-600">&amp;</span> CO
           </span>
         </div>
@@ -125,7 +102,7 @@
   </nav>
 
   <!-- HERO -->
-  <header id="home" class="relative bg-white pt-10 pb-14 lg:pt-20 lg:pb-24 overflow-hidden">
+  <header id="home" class="relative bg-white pt-10 pb-20 lg:pt-20 lg:pb-24 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-12 items-start">
 
@@ -140,20 +117,12 @@
             <span class="text-brand-blue">St. Petersburg</span> &amp; Nearby Areas
           </h1>
 
-          <!-- MOBILE: remove the long "AI-ish" paragraph; keep a short direct line
-               DESKTOP: keep your original paragraph exactly -->
-          <p class="md:hidden text-lg text-gray-600 mb-6 leading-relaxed">
-            Fast, professional home cleaning with clear pricing. Request a quote in seconds.
-          </p>
-
-          <p class="hidden md:block text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
+          <p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
             We are <span class="font-semibold text-brand-dark">people</span> + <span class="font-semibold text-brand-dark">service</span> + <span class="font-semibold text-brand-dark">quality</span> you can trust.
             We treat your home with care, communicate clearly, and give you back time for what matters.
           </p>
 
-          <!-- MOBILE: remove the duplicate button stack (phone already in header + sticky quote exists)
-               DESKTOP: keep your original two buttons exactly -->
-          <div class="hidden md:flex flex-col sm:flex-row gap-4 mb-8">
+          <div class="flex flex-col sm:flex-row gap-4 mb-8">
             <a href="tel:9543933479"
                class="flex-1 bg-brand-dark text-white text-center py-3 rounded-xl text-lg font-bold hover:bg-black transition shadow-xl flex items-center justify-center gap-3">
               <i class="fas fa-phone"></i> Give Us a Call
@@ -165,17 +134,7 @@
             </a>
           </div>
 
-          <!-- MOBILE: one clean CTA that scrolls to quote -->
-          <div class="md:hidden mb-6">
-            <a href="#quote"
-               class="w-full bg-brand-blue text-white text-center py-3 rounded-xl text-lg font-bold hover:bg-opacity-90 transition shadow-xl block">
-              Get a Quote
-            </a>
-          </div>
-
-          <!-- MOBILE: hide this "trusted local service..." line (clutter)
-               DESKTOP: keep exactly -->
-          <div class="hidden md:flex items-center gap-3 border-t pt-6 border-gray-100">
+          <div class="flex items-center gap-3 border-t pt-6 border-gray-100">
             <div class="flex text-yellow-400">
               <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
@@ -210,8 +169,8 @@
   </header>
 
   <!-- TRUST BAR -->
-  <!-- MOBILE: hide (you already have the pill above) | DESKTOP: keep exactly as-is -->
-  <section class="hidden md:block bg-emerald-600 py-3 md:py-10 reveal">
+  <!-- Desktop stays identical. Mobile fits 4 items with no horizontal scroll (smaller icon/text). -->
+  <section class="bg-emerald-600 py-3 md:py-10">
     <div class="max-w-7xl mx-auto px-4">
       <div class="grid grid-cols-4 md:grid md:grid-cols-4 gap-2 md:gap-8 text-center text-white">
         <div class="flex flex-col items-center min-w-0">
@@ -235,79 +194,77 @@
   </section>
 
   <!-- SERVICES -->
-  <!-- MOBILE: 2-column compact grid so options fit on screen | DESKTOP: same 3-column layout -->
-  <section id="services" class="py-16 md:py-20 bg-gray-50 reveal">
+  <section id="services" class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center mb-10 md:mb-16">
+      <div class="text-center mb-16">
         <h2 class="text-4xl font-bold mb-4">Our Cleaning Services</h2>
         <p class="text-gray-500 max-w-2xl mx-auto">From maintenance cleaning to deep resets — pick what fits your home.</p>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
-        <div class="bg-white p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100">
-          <i class="fas fa-broom text-3xl md:text-4xl text-emerald-600 mb-4 md:mb-6"></i>
-          <h3 class="text-lg md:text-2xl font-bold mb-2 md:mb-3">Regular</h3>
-          <p class="text-gray-500 text-sm md:text-base mb-0 md:mb-6">Routine upkeep to stay fresh.</p>
-          <ul class="hidden md:block text-sm font-semibold text-gray-700 space-y-2 mb-6">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100">
+          <i class="fas fa-broom text-4xl text-emerald-600 mb-6"></i>
+          <h3 class="text-2xl font-bold mb-3">Regular / Maintenance</h3>
+          <p class="text-gray-500 mb-6">Routine cleaning that keeps your home consistently fresh and comfortable.</p>
+          <ul class="text-sm font-semibold text-gray-700 space-y-2 mb-6">
             <li><i class="fas fa-check text-emerald-600 mr-2"></i>Dusting &amp; surfaces</li>
             <li><i class="fas fa-check text-emerald-600 mr-2"></i>Floors (vacuum/mop)</li>
             <li><i class="fas fa-check text-emerald-600 mr-2"></i>Kitchen &amp; baths</li>
           </ul>
-          <a href="#quote" class="text-brand-blue font-bold text-sm md:text-base">Get a Quote <i class="fas fa-chevron-right ml-1"></i></a>
+          <a href="#quote" class="text-brand-blue font-bold">Get a Quote <i class="fas fa-chevron-right ml-1"></i></a>
         </div>
 
-        <div class="bg-white p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-lg border-2 border-brand-mint relative overflow-hidden">
+        <div class="bg-white p-6 rounded-3xl shadow-lg border-2 border-brand-mint relative overflow-hidden">
           <div class="absolute top-0 right-0 bg-emerald-600 text-white text-[10px] px-4 py-1 font-black uppercase">Most Popular</div>
-          <i class="fas fa-star text-3xl md:text-4xl text-emerald-600 mb-4 md:mb-6"></i>
-          <h3 class="text-lg md:text-2xl font-bold mb-2 md:mb-3">Deep Clean</h3>
-          <p class="text-gray-500 text-sm md:text-base mb-0 md:mb-6">A true reset for buildup.</p>
-          <ul class="hidden md:block text-sm font-semibold text-gray-700 space-y-2 mb-6">
+          <i class="fas fa-star text-4xl text-emerald-600 mb-6"></i>
+          <h3 class="text-2xl font-bold mb-3">Deep Cleaning</h3>
+          <p class="text-gray-500 mb-6">A detailed clean for buildup, baseboards, corners, and a true reset.</p>
+          <ul class="text-sm font-semibold text-gray-700 space-y-2 mb-6">
             <li><i class="fas fa-check text-emerald-600 mr-2"></i>Detail-focused</li>
             <li><i class="fas fa-check text-emerald-600 mr-2"></i>Heavier dusting</li>
             <li><i class="fas fa-check text-emerald-600 mr-2"></i>Extra touches</li>
           </ul>
-          <a href="#quote" class="text-brand-blue font-bold text-sm md:text-base">Get a Quote <i class="fas fa-chevron-right ml-1"></i></a>
+          <a href="#quote" class="text-brand-blue font-bold">Get a Quote <i class="fas fa-chevron-right ml-1"></i></a>
         </div>
 
-        <div class="bg-white p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100">
-          <i class="fas fa-truck-moving text-3xl md:text-4xl text-emerald-600 mb-4 md:mb-6"></i>
-          <h3 class="text-lg md:text-2xl font-bold mb-2 md:mb-3">Move In/Out</h3>
-          <p class="text-gray-500 text-sm md:text-base mb-0 md:mb-6">Transitions made easy.</p>
-          <ul class="hidden md:block text-sm font-semibold text-gray-700 space-y-2 mb-6">
+        <div class="bg-white p-6 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100">
+          <i class="fas fa-truck-moving text-4xl text-emerald-600 mb-6"></i>
+          <h3 class="text-2xl font-bold mb-3">Move-In / Move-Out</h3>
+          <p class="text-gray-500 mb-6">Designed for transitions — start fresh or leave a spotless impression.</p>
+          <ul class="text-sm font-semibold text-gray-700 space-y-2 mb-6">
             <li><i class="fas fa-check text-emerald-600 mr-2"></i>Empty-home focus</li>
             <li><i class="fas fa-check text-emerald-600 mr-2"></i>Thorough detailing</li>
             <li><i class="fas fa-check text-emerald-600 mr-2"></i>Fast scheduling</li>
           </ul>
-          <a href="#quote" class="text-brand-blue font-bold text-sm md:text-base">Get a Quote <i class="fas fa-chevron-right ml-1"></i></a>
+          <a href="#quote" class="text-brand-blue font-bold">Get a Quote <i class="fas fa-chevron-right ml-1"></i></a>
         </div>
 
-        <div class="bg-white p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100">
-          <i class="fas fa-key text-3xl md:text-4xl text-emerald-600 mb-4 md:mb-6"></i>
-          <h3 class="text-lg md:text-2xl font-bold mb-2 md:mb-3">Airbnb</h3>
-          <p class="text-gray-500 text-sm md:text-base mb-0 md:mb-6">Reliable turnovers.</p>
-          <a href="#quote" class="text-brand-blue font-bold text-sm md:text-base">Get a Quote <i class="fas fa-chevron-right ml-1"></i></a>
+        <div class="bg-white p-6 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100">
+          <i class="fas fa-key text-4xl text-emerald-600 mb-6"></i>
+          <h3 class="text-2xl font-bold mb-3">Airbnb / Rentals</h3>
+          <p class="text-gray-500 mb-6">Turnovers built for 5-star stays — reliable, fast, and consistent.</p>
+          <a href="#quote" class="text-brand-blue font-bold">Get a Quote <i class="fas fa-chevron-right ml-1"></i></a>
         </div>
 
-        <div class="bg-white p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100">
-          <i class="fas fa-helmet-safety text-3xl md:text-4xl text-emerald-600 mb-4 md:mb-6"></i>
-          <h3 class="text-lg md:text-2xl font-bold mb-2 md:mb-3">Post-Const.</h3>
-          <p class="text-gray-500 text-sm md:text-base mb-0 md:mb-6">Dust &amp; detail cleanup.</p>
-          <a href="#quote" class="text-brand-blue font-bold text-sm md:text-base">Get a Quote <i class="fas fa-chevron-right ml-1"></i></a>
+        <div class="bg-white p-6 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100">
+          <i class="fas fa-helmet-safety text-4xl text-emerald-600 mb-6"></i>
+          <h3 class="text-2xl font-bold mb-3">Post-Construction</h3>
+          <p class="text-gray-500 mb-6">Dust, debris, and detail cleanup after renovations or construction.</p>
+          <a href="#quote" class="text-brand-blue font-bold">Get a Quote <i class="fas fa-chevron-right ml-1"></i></a>
         </div>
 
-        <div class="bg-white p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100">
-          <i class="fas fa-list-check text-3xl md:text-4xl text-emerald-600 mb-4 md:mb-6"></i>
-          <h3 class="text-lg md:text-2xl font-bold mb-2 md:mb-3">Add-Ons</h3>
-          <p class="text-gray-500 text-sm md:text-base mb-0 md:mb-6">Oven, fridge, windows.</p>
-          <a href="#quote" class="text-brand-blue font-bold text-sm md:text-base">Get a Quote <i class="fas fa-chevron-right ml-1"></i></a>
+        <div class="bg-white p-6 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100">
+          <i class="fas fa-list-check text-4xl text-emerald-600 mb-6"></i>
+          <h3 class="text-2xl font-bold mb-3">Add-Ons</h3>
+          <p class="text-gray-500 mb-6">Oven, fridge, interior windows, laundry, pet hair focus, and more.</p>
+          <a href="#quote" class="text-brand-blue font-bold">Get a Quote <i class="fas fa-chevron-right ml-1"></i></a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- WHY HIRE US -->
-  <!-- MOBILE: hide this whole block (repeated info + stock photo) | DESKTOP: keep exactly -->
-  <section id="why" class="hidden md:block py-20 bg-white reveal">
+  <section id="why" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4">
       <div class="grid lg:grid-cols-2 gap-12 items-start">
         <div>
@@ -369,27 +326,14 @@
   </section>
 
   <!-- AREAS WE SERVE -->
-  <section id="areas" class="py-16 md:py-20 bg-gray-50 reveal">
+  <section id="areas" class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center mb-10 md:mb-12">
+      <div class="text-center mb-12">
         <h2 class="text-4xl font-bold mb-3">Areas We Serve</h2>
         <p class="text-gray-500 max-w-3xl mx-auto">Based in St. Petersburg and serving nearby areas.</p>
       </div>
 
-      <div class="bg-white rounded-3xl shadow-lg border border-gray-100 p-6 md:p-8">
-        <!-- MOBILE: simple embedded service zone map (no API key) -->
-        <div class="md:hidden mb-6">
-          <div class="text-sm font-bold text-gray-800 mb-3">Service Zone Map</div>
-          <iframe
-            class="w-full h-64 rounded-2xl border border-gray-100"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=-82.8420%2C27.6520%2C-82.5200%2C27.9200&amp;layer=mapnik&amp;marker=27.7731%2C-82.6400"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Service area map">
-          </iframe>
-          <div class="text-xs text-gray-500 mt-2">Showing St. Petersburg &amp; nearby areas.</div>
-        </div>
-
+      <div class="bg-white rounded-3xl shadow-lg border border-gray-100 p-8">
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 text-gray-700 font-semibold">
           <div>St. Petersburg</div>
           <div>South Pasadena</div>
@@ -412,7 +356,7 @@
   </section>
 
   <!-- QUOTE FORM (NETLIFY FORMS) -->
-  <section id="quote" class="py-20 bg-white reveal">
+  <section id="quote" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4">
       <div class="max-w-6xl mx-auto">
         <h2 class="text-5xl md:text-6xl font-extrabold tracking-tight text-brand-dark">Get a Quote</h2>
@@ -492,7 +436,7 @@
   </section>
 
   <!-- FAQ -->
-  <section id="faq" class="py-20 bg-gray-50 reveal">
+  <section id="faq" class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-12">
         <h2 class="text-4xl font-bold mb-3">Frequently Asked Questions</h2>
@@ -534,7 +478,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-gray-100 py-12 text-center reveal">
+  <footer class="bg-gray-100 py-12 text-center">
     <p class="font-bold text-brand-dark mb-2">HOME CLEANING &amp; CO</p>
     <p class="text-gray-500 text-sm mb-3">Residential cleaning across Tampa Bay • Supplies included • Licensed &amp; insured</p>
     <p class="text-gray-600 text-sm mb-2">
@@ -553,50 +497,5 @@
       </a>
     </div>
   </div>
-
-  <script>
-    (function () {
-      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-      function activate(el) {
-        el.classList.add('reveal-active');
-      }
-
-      if (prefersReduced) {
-        document.querySelectorAll('.reveal').forEach(activate);
-        return;
-      }
-
-      const els = Array.from(document.querySelectorAll('.reveal'));
-
-      if ('IntersectionObserver' in window) {
-        const io = new IntersectionObserver(
-          (entries, observer) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                activate(entry.target);
-                observer.unobserve(entry.target);
-              }
-            });
-          },
-          { root: null, threshold: 0.12, rootMargin: '0px 0px -10% 0px' }
-        );
-
-        els.forEach(el => io.observe(el));
-      } else {
-        function onScroll() {
-          const windowH = window.innerHeight || document.documentElement.clientHeight;
-          els.forEach(el => {
-            if (el.classList.contains('reveal-active')) return;
-            const top = el.getBoundingClientRect().top;
-            if (top < windowH - 100) activate(el);
-          });
-        }
-        window.addEventListener('scroll', onScroll, { passive: true });
-        window.addEventListener('load', onScroll);
-        onScroll();
-      }
-    })();
-  </script>
 </body>
 </html>
