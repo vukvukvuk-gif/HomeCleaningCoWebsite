@@ -355,82 +355,38 @@
     </div>
   </section>
 
-  <!-- QUOTE FORM (NETLIFY FORMS) -->
+  <!-- QUOTE FORM (TALLY) -->
   <section id="quote" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4">
       <div class="max-w-6xl mx-auto">
         <h2 class="text-5xl md:text-6xl font-extrabold tracking-tight text-brand-dark">Get a Quote</h2>
         <p class="text-lg text-gray-500 mt-3">Tell us a bit about your home — we’ll reach out fast during business hours.</p>
 
-        <div class="mt-10 bg-white rounded-3xl shadow-xl border border-gray-100 p-6 md:p-8">
-          <form name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html" class="space-y-6">
-            <input type="hidden" name="form-name" value="quote" />
-            <p class="hidden">
-              <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-            </p>
-
-            <!-- Row 1 -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <input name="full_name" required type="text" placeholder="First &amp; Last Name"
-                class="w-full bg-white border border-gray-200 rounded-xl py-3 px-5 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-mint" />
-              <input name="address" required type="text" placeholder="Home Address"
-                class="w-full bg-white border border-gray-200 rounded-xl py-3 px-5 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-mint" />
-            </div>
-
-            <!-- Row 2 -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <select name="bedrooms" required
-                class="w-full bg-white border border-gray-200 rounded-xl py-3 px-5 text-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-brand-mint">
-                <option value="" disabled selected>Bedrooms</option>
-                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option>
-              </select>
-
-              <select name="bathrooms" required
-                class="w-full bg-white border border-gray-200 rounded-xl py-3 px-5 text-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-brand-mint">
-                <option value="" disabled selected>Bathrooms</option>
-                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option>
-              </select>
-            </div>
-
-            <!-- Cleanliness dropdown -->
-            <div class="bg-brand-light rounded-2xl border border-gray-100 p-5">
-              <label class="block font-bold text-gray-800 mb-3">Can you help us rate your home?</label>
-              <select name="condition" required
-                class="w-full bg-white border border-gray-200 rounded-xl py-3 px-5 text-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-brand-mint">
-                <option value="" disabled selected>Select 1–10 (1 = very clean, 10 = very dirty)</option>
-                <option value="1">1 — Almost Perfect — Already clean, just needs that extra shine!</option>
-                <option value="2">2 — Well-Kept with Minor Details — Clean and orderly, just a quick pass over needed.</option>
-                <option value="3">3 — A Little Dusty — Mostly clean; a light dusting and wipe would refresh it.</option>
-                <option value="4">4 — Needs a Little Attention — Slightly cluttered and ready for a touch-up.</option>
-                <option value="5">5 — Time for a Refresh — Noticeable dust and dirt; it's time for a reset.</option>
-                <option value="6">6 — In Need of a Thorough Clean — Dirt and grease are visible, especially in busy areas.</option>
-                <option value="7">7 — Heavy Cleaning Needed — Heavy build-up and some odors; it's time for a full refresh.</option>
-                <option value="8">8 — Deep Set Dirt — Mildew and stains have set in key areas; needs professional care.</option>
-                <option value="9">9 — Extreme Cleaning Situation — Grout and surfaces are coated with grime and mildew, calling for heavy-duty cleaning.</option>
-                <option value="10">10 — Ultimate Clean-Up Needed — Dirt and grime cover everything, needing a full transformation.</option>
-              </select>
-            </div>
-
-            <div class="flex flex-col sm:flex-row items-center gap-4 justify-between pt-2">
-              <button type="submit"
-                class="w-full sm:w-auto bg-emerald-600 text-white px-10 py-3 rounded-2xl text-lg font-bold shadow-lg hover:bg-opacity-90 transition">
-                Submit Quote Request
-              </button>
-            </div>
-          </form>
-
-          <form name="quote" data-netlify="true" netlify-honeypot="bot-field" hidden>
-            <input type="text" name="full_name" />
-            <input type="text" name="address" />
-            <input type="text" name="bedrooms" />
-            <input type="text" name="bathrooms" />
-            <input type="text" name="condition" />
-          </form>
-
-          <p class="text-xs text-gray-500 mt-6">
-            Satisfaction policy: If you have a concern, please contact us within 24 hours and we’ll re-clean the specific areas.
-          </p>
+        <div class="mt-10 bg-white rounded-3xl shadow-xl border border-gray-100 p-0 md:p-0 overflow-hidden">
+          <iframe data-tally-src="https://tally.so/embed/1A7RE1?transparentBackground=1&dynamicHeight=1&formEventsForwarding=1" loading="lazy" width="100%" height="886" frameborder="0" marginheight="0" marginwidth="0" title="Get started with your free estimate"></iframe>
+          <script>
+            var d = document,
+              w = "https://tally.so/widgets/embed.js",
+              v = function () {
+                "undefined" != typeof Tally
+                  ? Tally.loadEmbeds()
+                  : d
+                      .querySelectorAll('iframe[data-tally-src]:not([src])')
+                      .forEach(function (e) {
+                        e.src = e.dataset.tallySrc;
+                      });
+              };
+            if ("undefined" != typeof Tally) v();
+            else if (d.querySelector('script[src="' + w + '"]') == null) {
+              var s = d.createElement("script");
+              s.src = w;
+              s.onload = v;
+              s.onerror = v;
+              d.body.appendChild(s);
+            }
+          </script>
         </div>
+
       </div>
     </div>
   </section>
