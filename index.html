@@ -1,533 +1,1124 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <title>Home Cleaning &amp; Co | St. Petersburg &amp; Tampa Bay House Cleaning</title>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-  <meta name="theme-color" content="#5FA37A">
-
-  <meta name="description"
-    content="Professional residential cleaning services in St. Petersburg and Tampa Bay. Licensed &amp; insured, supplies included. Get a fast quote today." />
-
-  <!-- Canonical (replace with your real domain once live) -->
-  <link rel="canonical" href="https://www.homecleaningco.com/" />
-
-  <!-- Performance: preconnect -->
-  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
-  <link rel="preconnect" href="https://tally.so" crossorigin>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Home Cleaning &amp; Co | Best Cleaning Service in St. Petersburg, FL</title>
+  <meta name="description" content="Family-owned, licensed & insured home cleaning in St. Petersburg. Supplies included. 24-hour reclean satisfaction guarantee. Book now." />
+  <meta name="robots" content="index,follow" />
 
   <meta property="og:title" content="Home Cleaning &amp; Co" />
-  <meta property="og:description" content="Professional residential cleaning services in St. Petersburg and Tampa Bay. Get a fast quote today." />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1581578731548-c64695ce6958" />
+  <meta property="og:description" content="St. Petersburg’s most trusted home cleaning team. Book now." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.homecleaningco.com/" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Home Cleaning &amp; Co" />
-  <meta name="twitter:description" content="Professional residential cleaning services in St. Petersburg and Tampa Bay. Licensed &amp; insured, supplies included." />
-  <meta name="twitter:image" content="https://images.unsplash.com/photo-1581578731548-c64695ce6958" />
-
-  <!-- ✅ Rufina Font (added) -->
-  <link href="https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              mint: '#5FA37A',
-              blue: '#8AA7B5',
-              dark: '#4A4E54',
-              light: '#F8FAFB'
-            }
-          }
-        }
-      }
-    }
-  </script>
-
-  <!-- Local Business Schema (improved) -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "HomeAndConstructionBusiness",
-      "name": "Home Cleaning & Co",
-      "url": "https://www.homecleaningco.com/",
-      "image": "https://images.unsplash.com/photo-1581578731548-c64695ce6958",
-      "telephone": "+19543933479",
-      "email": "support@homecleaningco.com",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "St. Petersburg",
-        "addressRegion": "FL",
-        "addressCountry": "US"
-      },
-      "areaServed": [
-        "St. Petersburg, FL",
-        "Pinellas Park, FL",
-        "Gulfport, FL",
-        "Seminole, FL",
-        "Treasure Island, FL",
-        "Madeira Beach, FL",
-        "South Pasadena, FL",
-        "Kenneth City, FL"
-      ],
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-          "opens": "07:00",
-          "closes": "20:00"
-        }
-      ]
-    }
-  </script>
 
   <style>
-    html { scroll-behavior: smooth; }
-
-    /* ✅ Rufina class (added) */
-    .rufina {
-      font-family: 'Rufina', serif;
-      letter-spacing: 0.02em;
+    :root{
+      --bg:#0b1020;
+      --card:#0f1733;
+      --muted:#a9b3d6;
+      --text:#eef1ff;
+      --brand:#6ee7ff;
+      --brand2:#a78bfa;
+      --line:rgba(255,255,255,.10);
+      --shadow: 0 14px 40px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1120px;
     }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(1200px 600px at 10% 0%, rgba(110,231,255,.20), transparent 60%),
+        radial-gradient(900px 600px at 80% 10%, rgba(167,139,250,.18), transparent 55%),
+        radial-gradient(900px 700px at 50% 100%, rgba(110,231,255,.10), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.45;
+      overflow-x:hidden;
+    }
+
+    a{color:inherit; text-decoration:none}
+    .container{max-width:var(--max); margin:0 auto; padding:0 18px}
+
+    /* Top nav */
+    .navWrap{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(12px);
+      background: rgba(11,16,32,.55);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800;
+      letter-spacing:.2px;
+    }
+    .logoDot{
+      width:12px; height:12px; border-radius:99px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow: 0 0 0 4px rgba(110,231,255,.10);
+    }
+
+    .navLinks{
+      display:flex; gap:18px; align-items:center;
+      color:var(--muted);
+      font-weight:600;
+      font-size:14px;
+    }
+    .navLinks a:hover{color:var(--text)}
+    .ctaRow{display:flex; gap:10px; align-items:center}
+
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:11px 14px;
+      border-radius: 999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color:var(--text);
+      font-weight:800;
+      font-size:14px;
+      transition:.18s transform, .18s background, .18s border;
+      cursor:pointer;
+      user-select:none;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.18)}
+    .btn.primary{
+      border:none;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      color:#071022;
+      box-shadow: 0 12px 30px rgba(110,231,255,.12);
+    }
+    .btn.primary:hover{transform: translateY(-1px) scale(1.01)}
+
+    .hamburger{display:none}
+
+    /* Hero */
+    .hero{
+      padding: 42px 0 26px;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .heroCard{
+      position:relative;
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      min-height: 420px;
+    }
+    .heroCardInner{padding:28px}
+    .badge{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding:8px 12px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background: rgba(255,255,255,.05);
+      color:var(--muted);
+      font-weight:700;
+      font-size:13px;
+      margin-bottom:14px;
+    }
+    .spark{
+      width:8px; height:8px; border-radius:99px;
+      background: var(--brand);
+      box-shadow: 0 0 0 6px rgba(110,231,255,.10);
+    }
+    h1{
+      margin:0 0 10px;
+      font-size: 48px;
+      line-height:1.05;
+      letter-spacing:-.8px;
+    }
+    .heroSub{
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 56ch;
+      margin: 0 0 18px;
+    }
+    .heroActions{display:flex; gap:12px; flex-wrap:wrap; margin: 12px 0 18px}
+    .trustBar{
+      display:grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap:10px;
+      margin-top: 18px;
+    }
+    .trustPill{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      border-radius: 14px;
+      padding:10px 12px;
+      display:flex; gap:10px; align-items:center;
+      color: var(--muted);
+      font-weight:800;
+      font-size:13px;
+    }
+    .icon{
+      width:28px; height:28px;
+      border-radius: 12px;
+      background: rgba(110,231,255,.12);
+      border:1px solid rgba(110,231,255,.20);
+      display:flex; align-items:center; justify-content:center;
+      color: var(--brand);
+      flex: 0 0 auto;
+    }
+
+    .heroImg{
+      position:absolute;
+      inset:0;
+      opacity:.22;
+      background:
+        radial-gradient(700px 400px at 70% 20%, rgba(167,139,250,.35), transparent 60%),
+        linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.65)),
+        url("https://images.unsplash.com/photo-1581578731548-c64695ce6958?auto=format&fit=crop&w=1600&q=60");
+      background-size: cover;
+      background-position: center;
+      transform: scale(1.03);
+      filter: saturate(1.1);
+    }
+
+    .sideCard{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.04);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      min-height: 420px;
+    }
+    .sideImg{
+      height: 200px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.55)),
+        url("https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=60");
+      background-size:cover;
+      background-position:center;
+      border-bottom:1px solid var(--line);
+    }
+    .sideBody{padding:18px}
+    .stats{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:10px;
+    }
+    .stat{
+      border:1px solid var(--line);
+      border-radius: 14px;
+      padding:12px 12px;
+      background: rgba(255,255,255,.03);
+      display:flex; justify-content:space-between; align-items:baseline;
+      gap:12px;
+    }
+    .stat strong{font-size:15px}
+    .stat span{color:var(--muted); font-weight:700; font-size:13px}
+
+    /* Sections */
+    section{padding: 34px 0}
+    .sectionHead{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:16px;
+      margin-bottom: 16px;
+    }
+    .sectionHead h2{
+      margin:0;
+      font-size: 28px;
+      letter-spacing:-.4px;
+    }
+    .sectionHead p{
+      margin:0;
+      color:var(--muted);
+      max-width: 70ch;
+      font-weight:600;
+      font-size:14px;
+    }
+
+    .grid2{display:grid; grid-template-columns: 1fr 1fr; gap:16px}
+    .card{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.04);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .cardPad{padding:18px}
+    .muted{color:var(--muted)}
+    .kicker{color:var(--muted); font-weight:800; text-transform:uppercase; letter-spacing:.18em; font-size:12px}
+
+    /* Services */
+    .services{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap:14px;
+    }
+    .svc{
+      display:flex; flex-direction:column;
+      min-height: 210px;
+    }
+    .svcImg{
+      height: 120px;
+      border-bottom:1px solid var(--line);
+      background-size: cover;
+      background-position: center;
+      filter:saturate(1.05);
+    }
+    .svc h3{margin: 12px 0 0; font-size:16px}
+    .svc p{margin:8px 0 0; color:var(--muted); font-weight:600; font-size:13px}
+
+    /* Testimonials slider */
+    .slider{
+      position:relative;
+      overflow:hidden;
+    }
+    .track{
+      display:flex;
+      transition: transform .45s ease;
+      will-change:transform;
+    }
+    .tCard{
+      flex: 0 0 100%;
+      padding: 0;
+    }
+    .tInner{padding:18px}
+    .quote{font-size:15px; margin:0 0 12px; color:var(--text)}
+    .who{
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+      color:var(--muted); font-weight:800; font-size:13px;
+    }
+    .avatar{
+      width:34px; height:34px; border-radius: 12px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      display:flex; align-items:center; justify-content:center;
+      font-weight:900; color: var(--text);
+    }
+    .sliderControls{
+      display:flex; gap:10px; align-items:center; justify-content:flex-end;
+      margin-top:10px;
+    }
+
+    /* Areas */
+    .chips{display:flex; flex-wrap:wrap; gap:10px}
+    .chip{
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      font-weight:800;
+      font-size:13px;
+      color: var(--muted);
+    }
+    .chip strong{color:var(--text)}
+    .chip.hq{border-color: rgba(110,231,255,.25); background: rgba(110,231,255,.10)}
+    .chip.hq strong{color: var(--brand)}
+
+    /* FAQ */
+    .faq{display:grid; gap:10px}
+    details{
+      border:1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255,255,255,.03);
+      overflow:hidden;
+    }
+    summary{
+      list-style:none;
+      cursor:pointer;
+      padding: 14px 14px;
+      font-weight:900;
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px;
+    }
+    summary::-webkit-details-marker{display:none}
+    details .ans{
+      padding: 0 14px 14px;
+      color:var(--muted);
+      font-weight:650;
+      font-size:14px;
+    }
+    .chev{
+      width:26px; height:26px; border-radius: 10px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      display:flex; align-items:center; justify-content:center;
+      color: var(--muted);
+      flex: 0 0 auto;
+      transition: transform .2s ease;
+    }
+    details[open] .chev{transform: rotate(90deg)}
+
+    /* Quote / form */
+    .quoteGrid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    .steps{
+      display:flex;
+      gap:8px;
+      align-items:center;
+      color:var(--muted);
+      font-weight:800;
+      font-size:13px;
+      margin-bottom: 10px;
+    }
+    .stepDot{
+      width:8px; height:8px; border-radius: 99px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.05);
+    }
+    .stepDot.on{background: linear-gradient(135deg, var(--brand), var(--brand2)); border:none}
+    .formRow{display:grid; grid-template-columns: 1fr 1fr; gap:10px}
+    label{display:block; font-weight:850; font-size:13px; margin: 10px 0 6px}
+    input, select, textarea{
+      width:100%;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: rgba(8,12,24,.55);
+      color: var(--text);
+      outline:none;
+      font-weight:700;
+    }
+    input::placeholder, textarea::placeholder{color: rgba(238,241,255,.55)}
+    textarea{min-height: 100px; resize: vertical}
+    .formActions{display:flex; gap:10px; justify-content:flex-end; margin-top:12px}
+
+    .miniList{display:grid; gap:10px; margin-top: 8px}
+    .miniItem{
+      border:1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255,255,255,.03);
+      padding: 12px;
+      display:flex; gap:10px; align-items:flex-start;
+      color:var(--muted);
+      font-weight:750;
+      font-size:13px;
+    }
+    .miniItem b{color:var(--text)}
+    .notice{
+      margin-top:10px;
+      color:rgba(238,241,255,.70);
+      font-weight:650;
+      font-size:12.5px;
+    }
+
+    /* Footer */
+    footer{
+      padding: 26px 0 36px;
+      border-top:1px solid var(--line);
+      background: rgba(0,0,0,.14);
+    }
+    .footGrid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 14px;
+      align-items:start;
+    }
+    .footLinks{display:flex; gap:14px; flex-wrap:wrap; color:var(--muted); font-weight:800; font-size:13px}
+    .copyright{color:rgba(238,241,255,.55); font-weight:650; font-size:12.5px; margin-top:10px}
+
+    /* Mobile */
+    @media (max-width: 920px){
+      .heroGrid{grid-template-columns: 1fr; }
+      .trustBar{grid-template-columns: 1fr 1fr}
+      .services{grid-template-columns: 1fr 1fr}
+      .grid2{grid-template-columns: 1fr}
+      .quoteGrid{grid-template-columns: 1fr}
+      h1{font-size: 40px}
+    }
+    @media (max-width: 680px){
+      .navLinks{display:none}
+      .hamburger{
+        display:inline-flex;
+        width:42px; height:42px;
+        border-radius: 999px;
+        border:1px solid var(--line);
+        background: rgba(255,255,255,.06);
+        align-items:center; justify-content:center;
+        cursor:pointer;
+      }
+      .heroCardInner{padding:22px}
+      h1{font-size: 36px}
+      .services{grid-template-columns: 1fr}
+      .formRow{grid-template-columns: 1fr}
+      .footGrid{grid-template-columns: 1fr}
+    }
+
+    /* Mobile drawer */
+    .drawerOverlay{
+      position:fixed; inset:0; z-index:100;
+      background: rgba(0,0,0,.55);
+      display:none;
+      align-items:flex-start;
+      justify-content:flex-end;
+    }
+    .drawer{
+      width:min(360px, 92vw);
+      height:100%;
+      background: rgba(11,16,32,.92);
+      border-left:1px solid var(--line);
+      backdrop-filter: blur(12px);
+      padding: 16px;
+    }
+    .drawer a{
+      display:block;
+      padding: 12px 12px;
+      border:1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255,255,255,.04);
+      margin-bottom:10px;
+      color: var(--text);
+      font-weight:900;
+    }
+    .drawer .mutedLink{color: var(--muted); font-weight:850}
   </style>
 </head>
 
-<body class="bg-brand-light text-brand-dark overflow-x-hidden">
+<body>
+  <div class="navWrap">
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="#top" aria-label="Home">
+          <span class="logoDot" aria-hidden="true"></span>
+          <span>Home Cleaning &amp; Co</span>
+        </a>
 
-  <!-- NAV -->
-  <nav class="sticky top-0 bg-white/95 backdrop-blur border-b border-gray-100 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-20 items-center">
-        <div class="flex items-center gap-3">
-          <img
-            src="https://cdn.grapesjs.com/workspaces/cmlh11fl670ggg8fwp7s7ecks/assets/22ee1970-587d-4e38-bfd5-6a81d39ec2e6__img3529.png"
-            alt="Home Cleaning &amp; Co logo"
-            class="h-12 md:h-12 w-auto"
-            loading="eager"
-            decoding="async"
-          />
-          <!-- ✅ CHANGED: added rufina class -->
-          <span class="text-lg font-extrabold tracking-tight leading-none rufina">
-            HOME CLEANING <span class="text-emerald-600">&amp;</span> CO
-          </span>
-        </div>
+        <nav class="navLinks" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#areas">Areas</a>
+          <a href="#support">Support</a>
+        </nav>
 
-        <div class="hidden md:flex items-center gap-6 text-gray-700 font-semibold">
-          <a href="#home" class="hover:text-brand-dark transition">Home</a>
-          <a href="#services" class="hover:text-brand-dark transition">Services</a>
-          <a href="#why" class="hover:text-brand-dark transition">Why Hire Us</a>
-          <a href="#areas" class="hover:text-brand-dark transition">Areas</a>
-          <a href="#faq" class="hover:text-brand-dark transition">FAQ</a>
-        </div>
-
-        <!-- CHANGED: top-right buttons -->
-        <div class="flex items-center gap-3">
-          <!-- Replaced the gray/blue "Book Now" with "Get a Free Estimate" -->
-          <a href="estimate.html"
-             class="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 rounded-full font-extrabold transition hidden sm:inline-flex items-center gap-2 shadow-sm">
-            <i class="fas fa-clipboard-list"></i> Get a Free Estimate
-          </a>
-
-          <!-- Replaced the call button with another "Get a Free Estimate" button (keeps mobile-friendly spacing) -->
-          <a href="estimate.html" aria-label="Get a free estimate"
-             class="bg-brand-dark hover:bg-black text-white px-5 py-3 rounded-full font-extrabold transition flex items-center gap-2 shadow-sm">
-            <i class="fas fa-clipboard-list"></i> Get a Free Estimate
-          </a>
+        <div class="ctaRow">
+          <a class="btn primary" href="#book">Book Now</a>
+          <button class="hamburger" id="openDrawer" aria-label="Open menu">☰</button>
         </div>
       </div>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <header id="home" class="relative bg-white overflow-hidden">
-    <div class="absolute inset-0 pointer-events-none">
-      <div class="absolute -top-24 -right-24 w-[420px] h-[420px] bg-emerald-600/10 blur-3xl rounded-full"></div>
-      <div class="absolute -bottom-28 -left-28 w-[520px] h-[520px] bg-brand-blue/15 blur-3xl rounded-full"></div>
-    </div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16 lg:pt-20 lg:pb-24 relative">
-      <div class="grid lg:grid-cols-2 gap-12 items-start">
-
-        <div>
-          <div class="inline-flex items-center gap-2 bg-emerald-600/10 text-emerald-700 px-4 py-2 rounded-full mb-6 border border-emerald-600/10">
-            <i class="fas fa-shield-alt text-sm"></i>
-            <span class="text-xs font-black uppercase tracking-widest">Licensed &amp; Insured • Supplies Included</span>
-          </div>
-
-          <h1 class="text-4xl md:text-6xl text-gray-900 leading-[1.05] mb-6 font-extrabold tracking-tight">
-            Sparkling Clean Homes in
-            <span class="text-brand-blue">St. Petersburg</span> &amp; Nearby Areas
-          </h1>
-
-          <p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-xl">
-            We’re a reliable local team focused on consistent results, clear communication, and a home that feels truly refreshed.
-          </p>
-
-          <div class="flex flex-col sm:flex-row gap-4 mb-8">
-            <a href="estimate.html"
-               class="flex-1 bg-emerald-600 text-white text-center py-3 rounded-2xl text-lg font-extrabold hover:bg-emerald-700 transition shadow-lg flex items-center justify-center gap-3">
-              <i class="fas fa-clipboard-list"></i> Get a Free Estimate
-            </a>
-
-            <a href="estimate.html"
-               class="flex-1 bg-brand-dark text-white text-center py-3 rounded-2xl text-lg font-extrabold hover:bg-black transition shadow-lg flex items-center justify-center gap-3">
-              <i class="fas fa-calendar-check"></i> Book Now
-            </a>
-          </div>
-
-          <div class="flex items-center gap-3 border-t pt-6 border-gray-100">
-            <div class="flex text-yellow-400" aria-label="Five star service">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            </div>
-            <span class="text-sm font-semibold text-gray-500">Trusted local service • Clear standards • Friendly team</span>
-          </div>
-        </div>
-
-        <!-- Hero gallery -->
-        <div class="grid grid-cols-2 gap-4 w-full justify-items-stretch">
-          <img
-            src="/images/living-room.jpg"
-            alt="Freshly cleaned living room"
-            class="rounded-3xl shadow-lg h-64 w-full object-cover mt-8 border border-gray-100"
-            loading="lazy"
-            decoding="async"
-          />
-          <img
-            src="/images/kitchen.jpg"
-            alt="Spotless kitchen after professional cleaning"
-            class="rounded-3xl shadow-lg h-64 w-full object-cover border border-gray-100"
-            loading="lazy"
-            decoding="async"
-          />
-          <div class="col-span-2 relative">
-            <img
-              src="/images/bathroom.jpg"
-              alt="Bathroom deep clean with shining surfaces"
-              class="rounded-3xl shadow-lg h-52 w-full object-cover border border-gray-100"
-              loading="lazy"
-              decoding="async"
-            />
-            <div class="absolute inset-0 bg-emerald-600/10 rounded-3xl"></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </header>
-
-  <!-- TRUST BAR -->
-  <section class="bg-emerald-600 py-4 md:py-10">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="grid grid-cols-4 md:grid-cols-4 gap-2 md:gap-10 text-center text-white">
-        <div class="flex flex-col items-center min-w-0">
-          <i class="fas fa-shield-alt text-lg md:text-3xl mb-1 md:mb-3"></i>
-          <p class="font-extrabold text-[10px] leading-tight md:text-base">Licensed &amp; Insured</p>
-        </div>
-        <div class="flex flex-col items-center min-w-0">
-          <i class="fas fa-spray-can-sparkles text-lg md:text-3xl mb-1 md:mb-3"></i>
-          <p class="font-extrabold text-[10px] leading-tight md:text-base">Supplies Included</p>
-        </div>
-        <div class="flex flex-col items-center min-w-0">
-          <i class="fas fa-bolt text-lg md:text-3xl mb-1 md:mb-3"></i>
-          <p class="font-extrabold text-[10px] leading-tight md:text-base">Fast Quotes</p>
-        </div>
-        <div class="flex flex-col items-center min-w-0">
-          <i class="fas fa-smile text-lg md:text-3xl mb-1 md:mb-3"></i>
-          <p class="font-extrabold text-[10px] leading-tight md:text-base">Satisfaction Guaranteed</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services" class="py-16 md:py-24 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center mb-14">
-        <h2 class="text-4xl font-extrabold mb-4 tracking-tight">Our Cleaning Services</h2>
-        <p class="text-gray-500 max-w-2xl mx-auto">From maintenance cleaning to deep resets — pick what fits your home.</p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-7 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100">
-          <i class="fas fa-broom text-4xl text-emerald-600 mb-6"></i>
-          <h3 class="text-2xl font-extrabold mb-3">Regular / Maintenance</h3>
-          <p class="text-gray-500 mb-6">Routine cleaning that keeps your home consistently fresh and comfortable.</p>
-          <ul class="text-sm font-semibold text-gray-700 space-y-2 mb-6">
-            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Dusting &amp; surfaces</li>
-            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Floors (vacuum/mop)</li>
-            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Kitchen &amp; baths</li>
-          </ul>
-          <a href="estimate.html" class="text-brand-blue font-extrabold">Get a Free Estimate <i class="fas fa-chevron-right ml-1"></i></a>
-        </div>
-
-        <div class="bg-white p-7 rounded-3xl shadow-lg border-2 border-brand-mint relative overflow-hidden">
-          <div class="absolute top-0 right-0 bg-emerald-600 text-white text-[10px] px-4 py-1 font-black uppercase">Most Popular</div>
-          <i class="fas fa-star text-4xl text-emerald-600 mb-6"></i>
-          <h3 class="text-2xl font-extrabold mb-3">Deep Cleaning</h3>
-          <p class="text-gray-500 mb-6">A detailed clean for buildup, baseboards, corners, and a true reset.</p>
-          <ul class="text-sm font-semibold text-gray-700 space-y-2 mb-6">
-            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Detail-focused</li>
-            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Heavier dusting</li>
-            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Extra touches</li>
-          </ul>
-          <a href="estimate.html" class="text-brand-blue font-extrabold">Get a Free Estimate <i class="fas fa-chevron-right ml-1"></i></a>
-        </div>
-
-        <div class="bg-white p-7 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100">
-          <i class="fas fa-truck-moving text-4xl text-emerald-600 mb-6"></i>
-          <h3 class="text-2xl font-extrabold mb-3">Move-In / Move-Out</h3>
-          <p class="text-gray-500 mb-6">Designed for transitions — start fresh or leave a spotless impression.</p>
-          <ul class="text-sm font-semibold text-gray-700 space-y-2 mb-6">
-            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Empty-home focus</li>
-            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Thorough detailing</li>
-            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Fast scheduling</li>
-          </ul>
-          <a href="estimate.html" class="text-brand-blue font-extrabold">Get a Free Estimate <i class="fas fa-chevron-right ml-1"></i></a>
-        </div>
-
-        <div class="bg-white p-7 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100">
-          <i class="fas fa-key text-4xl text-emerald-600 mb-6"></i>
-          <h3 class="text-2xl font-extrabold mb-3">Airbnb / Rentals</h3>
-          <p class="text-gray-500 mb-6">Turnovers built for 5-star stays — reliable, fast, and consistent.</p>
-          <a href="estimate.html" class="text-brand-blue font-extrabold">Get a Free Estimate <i class="fas fa-chevron-right ml-1"></i></a>
-        </div>
-
-        <div class="bg-white p-7 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100">
-          <i class="fas fa-helmet-safety text-4xl text-emerald-600 mb-6"></i>
-          <h3 class="text-2xl font-extrabold mb-3">Post-Construction</h3>
-          <p class="text-gray-500 mb-6">Dust, debris, and detail cleanup after renovations or construction.</p>
-          <a href="estimate.html" class="text-brand-blue font-extrabold">Get a Free Estimate <i class="fas fa-chevron-right ml-1"></i></a>
-        </div>
-
-        <div class="bg-white p-7 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100">
-          <i class="fas fa-list-check text-4xl text-emerald-600 mb-6"></i>
-          <h3 class="text-2xl font-extrabold mb-3">Add-Ons</h3>
-          <p class="text-gray-500 mb-6">Oven, fridge, interior windows, laundry, pet hair focus, and more.</p>
-          <a href="estimate.html" class="text-brand-blue font-extrabold">Get a Free Estimate <i class="fas fa-chevron-right ml-1"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY HIRE US -->
-  <section id="why" class="py-16 md:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="grid lg:grid-cols-2 gap-12 items-start">
-        <div>
-          <h2 class="text-4xl font-extrabold mb-6 tracking-tight">Why Hire Us?</h2>
-          <p class="text-gray-600 text-lg leading-relaxed mb-8 max-w-xl">
-            Letting someone into your home is personal. Our goal is to earn trust through consistency, care, and clear communication.
-            Hire us for the service — stay with us because it feels easy.
-          </p>
-
-          <div class="space-y-4">
-            <div class="flex gap-4">
-              <div class="w-11 h-11 rounded-2xl bg-emerald-600/15 flex items-center justify-center text-emerald-600">
-                <i class="fas fa-heart"></i>
-              </div>
-              <div>
-                <p class="font-extrabold">Satisfaction-focused</p>
-                <p class="text-gray-600">If you have a concern, contact us within 24 hours and we’ll re-clean the specific areas.</p>
-              </div>
-            </div>
-
-            <div class="flex gap-4">
-              <div class="w-11 h-11 rounded-2xl bg-emerald-600/15 flex items-center justify-center text-emerald-600">
-                <i class="fas fa-shield"></i>
-              </div>
-              <div>
-                <p class="font-extrabold">Licensed &amp; insured</p>
-                <p class="text-gray-600">Professional standards with peace of mind.</p>
-              </div>
-            </div>
-
-            <div class="flex gap-4">
-              <div class="w-11 h-11 rounded-2xl bg-emerald-600/15 flex items-center justify-center text-emerald-600">
-                <i class="fas fa-spray-can-sparkles"></i>
-              </div>
-              <div>
-                <p class="font-extrabold">Supplies included</p>
-                <p class="text-gray-600">We arrive ready to clean — you don’t need to prep supplies.</p>
-              </div>
-            </div>
-
-            <div class="flex gap-4">
-              <div class="w-11 h-11 rounded-2xl bg-emerald-600/15 flex items-center justify-center text-emerald-600">
-                <i class="fas fa-comments"></i>
-              </div>
-              <div>
-                <p class="font-extrabold">Clear communication</p>
-                <p class="text-gray-600">Simple scheduling and quick responses during business hours.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="mt-10 flex flex-col sm:flex-row gap-4">
-            <a href="estimate.html" class="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-2xl font-extrabold text-center shadow-lg">
-              Get a Free Estimate
-            </a>
-          </div>
-        </div>
-
-        <div class="relative">
-          <img
-            src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1400&q=80"
-            alt="Clean kitchen after professional service"
-            class="rounded-3xl shadow-2xl w-full h-[520px] object-cover border border-gray-100"
-            loading="lazy"
-            decoding="async"
-          />
-          <div class="absolute -bottom-6 -right-6 bg-emerald-600 p-8 rounded-2xl text-white shadow-xl max-w-xs hidden lg:block">
-            <p class="italic">“We treat every home like it’s our own.”</p>
-            <p class="font-extrabold mt-2">— Home Cleaning &amp; Co</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- AREAS WE SERVE -->
-  <section id="areas" class="py-16 md:py-24 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-4xl font-extrabold mb-3 tracking-tight">Areas We Serve</h2>
-        <p class="text-gray-500 max-w-3xl mx-auto">Based in St. Petersburg and serving nearby areas.</p>
-      </div>
-
-      <div class="bg-white rounded-3xl shadow-lg border border-gray-100 p-8">
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 text-gray-700 font-semibold">
-
-  <a href="house-cleaning-st-petersburg-fl.html" class="hover:underline transition">
-    St. Petersburg
-  </a>
-
-  <a href="house-cleaning-south-pasadena-fl.html" class="hover:underline transition">
-    South Pasadena
-  </a>
-
-  <a href="house-cleaning-pinellas-park-fl.html" class="hover:underline transition">
-    Pinellas Park
-  </a>
-
-  <a href="house-cleaning-kenneth-city-fl.html" class="hover:underline transition">
-    Kenneth City
-  </a>
-
-  <a href="house-cleaning-lealman-fl.html" class="hover:underline transition">
-    Lealman
-  </a>
-
-  <a href="house-cleaning-west-lealman-fl.html" class="hover:underline transition">
-    West Lealman
-  </a>
-
-  <a href="house-cleaning-gulfport-fl.html" class="hover:underline transition">
-    Gulfport
-  </a>
-
-  <a href="house-cleaning-seminole-fl.html" class="hover:underline transition">
-    Seminole
-  </a>
-
-  <a href="house-cleaning-treasure-island-fl.html" class="hover:underline transition">
-    Treasure Island
-  </a>
-
-  <a href="house-cleaning-madeira-beach-fl.html" class="hover:underline transition">
-    Madeira Beach
-  </a>
-
-  <a href="house-cleaning-bay-pines-fl.html" class="hover:underline transition">
-    Bay Pines
-  </a>
-
-</div>
-
-
-
-        <div class="mt-6 text-sm text-gray-500">
-          Not sure if you’re in range? <a class="text-brand-blue font-extrabold underline" href="estimate.html">Request a free estimate</a> and we’ll confirm.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="py-16 md:py-24 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-4xl font-extrabold mb-3 tracking-tight">Frequently Asked Questions</h2>
-        <p class="text-gray-500 max-w-3xl mx-auto">Quick answers to common questions.</p>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-          <p class="font-extrabold text-lg">Do you bring supplies and equipment?</p>
-          <p class="text-gray-600 mt-2">Yes — we bring our own supplies and standard equipment. You don’t need to provide anything. If you prefer we use specific products (or avoid certain ingredients), just let us know in your quote request.</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-          <p class="font-extrabold text-lg">What are your hours?</p>
-          <p class="text-gray-600 mt-2">We’re available <span class="font-semibold">7am–8pm</span>, Monday through Sunday.</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-          <p class="font-extrabold text-lg">What if I’m not satisfied?</p>
-          <p class="text-gray-600 mt-2">Let us know within 24 hours and we’ll come back to re-clean the specific areas you mention.</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-          <p class="font-extrabold text-lg">Do I need to be home?</p>
-          <p class="text-gray-600 mt-2">No — many clients provide access instructions and come back to a spotless home.</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-          <p class="font-extrabold text-lg">How do you price cleanings?</p>
-          <p class="text-gray-600 mt-2">Pricing depends on bedrooms, bathrooms, and the home’s condition. Request a quote and we’ll confirm an accurate estimate quickly.</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-          <p class="font-extrabold text-lg">What’s your reschedule or cancellation policy?</p>
-          <p class="text-gray-600 mt-2">If you need to reschedule, please give us as much notice as possible so we can adjust the schedule and serve everyone on time.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="bg-gray-100 py-12 text-center">
-    <p class="font-extrabold text-brand-dark mb-2">HOME CLEANING &amp; CO</p>
-    <p class="text-gray-500 text-sm mb-3">Residential cleaning across Tampa Bay • Supplies included • Licensed &amp; insured</p>
-    <p class="text-gray-600 text-sm mb-2">
-      <a class="text-brand-blue font-extrabold underline" href="mailto:support@homecleaningco.com">support@homecleaningco.com</a>
-      •
-      <a class="text-brand-blue font-extrabold underline" href="tel:9543933479">(954) 393-3479</a>
-    </p>
-    <p class="text-gray-400 text-[10px] uppercase tracking-widest">© 2026 Home Cleaning &amp; Co. All Rights Reserved.</p>
-  </footer>
-
-  <!-- Sticky Mobile CTA -->
-  <div class="sm:hidden fixed bottom-4 left-4 right-4 z-50">
-    <div class="max-w-md mx-auto">
-      <a href="estimate.html" class="flex bg-emerald-600 hover:bg-emerald-700 text-white items-center justify-center py-3 rounded-full shadow-2xl font-black text-xl gap-3 transition">
-        <i class="fas fa-clipboard-list"></i> GET A FREE ESTIMATE
-      </a>
     </div>
   </div>
+
+  <!-- Mobile drawer -->
+  <div class="drawerOverlay" id="drawerOverlay" aria-hidden="true">
+    <div class="drawer" role="dialog" aria-modal="true" aria-label="Menu">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;">
+        <div class="brand">
+          <span class="logoDot" aria-hidden="true"></span>
+          <span>Home Cleaning &amp; Co</span>
+        </div>
+        <button class="btn" id="closeDrawer" type="button">Close</button>
+      </div>
+      <a href="#about" class="mutedLink">About</a>
+      <a href="#services" class="mutedLink">Services</a>
+      <a href="#reviews" class="mutedLink">Reviews</a>
+      <a href="#areas" class="mutedLink">Areas</a>
+      <a href="#support" class="mutedLink">Support</a>
+      <a class="btn primary" style="width:100%;margin-top:10px" href="#book">Book Now</a>
+    </div>
+  </div>
+
+  <main id="top">
+    <!-- HERO -->
+    <header class="hero">
+      <div class="container">
+        <div class="heroGrid">
+          <div class="heroCard">
+            <div class="heroImg" aria-hidden="true"></div>
+            <div class="heroCardInner">
+              <div class="badge"><span class="spark" aria-hidden="true"></span> Trusted by 500+ St. Pete Homes</div>
+
+              <h1>St. Petersburg's<br/>Most Trusted<br/>Home Cleaning Team</h1>
+
+              <p class="heroSub">
+                Family-owned, licensed &amp; insured. We bring the supplies, you enjoy the results — guaranteed.
+              </p>
+
+              <div class="heroActions">
+                <a class="btn primary" href="#book">Book Now</a>
+                <a class="btn" href="#services">View Services</a>
+              </div>
+
+              <div class="trustBar" role="list">
+                <div class="trustPill" role="listitem">
+                  <span class="icon" aria-hidden="true">✓</span> Licensed &amp; Insured
+                </div>
+                <div class="trustPill" role="listitem">
+                  <span class="icon" aria-hidden="true">🧽</span> Supplies Included
+                </div>
+                <div class="trustPill" role="listitem">
+                  <span class="icon" aria-hidden="true">★</span> Satisfaction Guaranteed
+                </div>
+                <div class="trustPill" role="listitem">
+                  <span class="icon" aria-hidden="true">⚡</span> Fast Quotes
+                </div>
+              </div>
+
+              <div style="margin-top:14px;">
+                <div class="badge" style="margin:0;">
+                  Ready to clean? <span style="color:var(--text);font-weight:900;margin-left:6px;">Get a quote in seconds</span>
+                </div>
+              </div>
+
+              <div class="heroActions" style="margin-top:12px">
+                <a class="btn primary" href="#book">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+          <aside class="sideCard" aria-label="Highlights">
+            <div class="sideImg" aria-hidden="true"></div>
+            <div class="sideBody">
+              <div class="stats">
+                <div class="stat">
+                  <strong>500+</strong>
+                  <span>Happy Homes Served in St. Pete</span>
+                </div>
+                <div class="stat">
+                  <strong>24-Hour Reclean</strong>
+                  <span>Satisfaction Guarantee</span>
+                </div>
+                <div class="stat">
+                  <strong>5-Star Rated</strong>
+                  <span>Google Reviews</span>
+                </div>
+              </div>
+              <p class="notice">
+                Note: This page is a static clone for easy editing. Hook the “Book Now” button to your booking link.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="sectionHead">
+          <div>
+            <div class="kicker">About Us</div>
+            <h2>More Than Just Cleaners. We’re Family.</h2>
+          </div>
+          <p>
+            Home Cleaning &amp; Co is a sibling-owned cleaning company proudly serving St. Petersburg. As a family-run business, we take pride in delivering dependable service with a personal touch.
+          </p>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <div class="cardPad">
+              <h3 style="margin:0 0 8px;font-size:16px;">Our promise</h3>
+              <p class="muted" style="margin:0;font-weight:650;">
+                Every visit is handled with the same level of care we’d expect in our own home.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="cardPad">
+              <h3 style="margin:0 0 8px;font-size:16px;">Why we’re different</h3>
+              <p class="muted" style="margin:0;font-weight:650;">
+                We stand by our work with a 24-hour reclean guarantee. If any detail is missed, we’ll return within 24 hours to make it right.
+              </p>
+              <p class="muted" style="margin:10px 0 0;font-weight:800;">
+                Sibling-owned &amp; operated • Based in St. Petersburg, FL
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <div class="sectionHead">
+          <div>
+            <div class="kicker">What are you looking for?</div>
+            <h2>Our Services</h2>
+          </div>
+          <p>Pick the cleaning type that fits your home, schedule, and goals.</p>
+        </div>
+
+        <div class="services">
+          <article class="card svc">
+            <div class="svcImg" style="background-image:url('https://images.unsplash.com/photo-1585421514285-efb74c2b69f2?auto=format&fit=crop&w=1600&q=60')"></div>
+            <div class="cardPad">
+              <h3>Regular Maintenance</h3>
+              <p>Keep your home consistently fresh with recurring cleanings.</p>
+            </div>
+          </article>
+
+          <article class="card svc">
+            <div class="svcImg" style="background-image:url('https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1600&q=60')"></div>
+            <div class="cardPad">
+              <h3>Deep Cleaning</h3>
+              <p>Detailed top-to-bottom cleaning for buildup, corners, and resets.</p>
+            </div>
+          </article>
+
+          <article class="card svc">
+            <div class="svcImg" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=60')"></div>
+            <div class="cardPad">
+              <h3>Move-In / Move-Out</h3>
+              <p>Empty-home focus to help you transition cleanly and confidently.</p>
+            </div>
+          </article>
+
+          <article class="card svc">
+            <div class="svcImg" style="background-image:url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1600&q=60')"></div>
+            <div class="cardPad">
+              <h3>Airbnb Turnover</h3>
+              <p>Reliable, fast turnovers designed to earn 5-star guest reviews.</p>
+            </div>
+          </article>
+
+          <article class="card svc">
+            <div class="svcImg" style="background-image:url('https://images.unsplash.com/photo-1581578017093-cd30fce4eeb8?auto=format&fit=crop&w=1600&q=60')"></div>
+            <div class="cardPad">
+              <h3>Post-Construction</h3>
+              <p>Dust, debris, and detail cleanup after renovations and projects.</p>
+            </div>
+          </article>
+
+          <article class="card svc">
+            <div class="svcImg" style="background-image:url('https://images.unsplash.com/photo-1581578731548-c64695ce6958?auto=format&fit=crop&w=1600&q=60')"></div>
+            <div class="cardPad">
+              <h3>Office Cleaning</h3>
+              <p>Professional cleaning to keep your workplace spotless and welcoming.</p>
+            </div>
+          </article>
+        </div>
+
+        <div style="margin-top:14px;display:flex;justify-content:flex-end;">
+          <a class="btn primary" href="#book">Book Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews">
+      <div class="container">
+        <div class="sectionHead">
+          <div>
+            <div class="kicker">Testimonials</div>
+            <h2>Loved by Locals</h2>
+          </div>
+          <p>Real feedback from your neighbors in St. Petersburg and across Pinellas County.</p>
+        </div>
+
+        <div class="card slider" aria-label="Testimonials">
+          <div class="track" id="track">
+            <div class="tCard">
+              <div class="tInner">
+                <p class="quote">“The team did an incredible job! My house has never looked this clean. They were professional, on time, and paid attention to every detail.”</p>
+                <div class="who">
+                  <div style="display:flex;align-items:center;gap:10px;">
+                    <div class="avatar">S</div>
+                    <div><b style="color:var(--text)">Sarah M.</b> • St. Petersburg</div>
+                  </div>
+                  <div aria-label="Rating">★★★★★</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tCard">
+              <div class="tInner">
+                <p class="quote">“Incredible attention to detail. They cleaned places I didn’t even know were dirty. Highly recommend for deep cleaning.”</p>
+                <div class="who">
+                  <div style="display:flex;align-items:center;gap:10px;">
+                    <div class="avatar">M</div>
+                    <div><b style="color:var(--text)">Michael B.</b> • St. Pete Beach</div>
+                  </div>
+                  <div aria-label="Rating">★★★★★</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tCard">
+              <div class="tInner">
+                <p class="quote">“The cleaners were so polite and respectful. They did a fantastic job on my bathrooms and kitchen. Will definitely book again.”</p>
+                <div class="who">
+                  <div style="display:flex;align-items:center;gap:10px;">
+                    <div class="avatar">A</div>
+                    <div><b style="color:var(--text)">Ashley K.</b> • St. Petersburg</div>
+                  </div>
+                  <div aria-label="Rating">★★★★★</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tCard">
+              <div class="tInner">
+                <p class="quote">“Reliable and trustworthy. I leave them my key and come home to a sparkling house every time. Best part of my week!”</p>
+                <div class="who">
+                  <div style="display:flex;align-items:center;gap:10px;">
+                    <div class="avatar">J</div>
+                    <div><b style="color:var(--text)">Jessica T.</b> • Largo</div>
+                  </div>
+                  <div aria-label="Rating">★★★★★</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tCard">
+              <div class="tInner">
+                <p class="quote">“Excellent service for my Airbnb rentals. They are quick, thorough, and always reliable. My guests love the cleanliness.”</p>
+                <div class="who">
+                  <div style="display:flex;align-items:center;gap:10px;">
+                    <div class="avatar">R</div>
+                    <div><b style="color:var(--text)">Robert L.</b> • Clearwater Beach</div>
+                  </div>
+                  <div aria-label="Rating">★★★★★</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sliderControls">
+          <button class="btn" id="prevBtn" type="button">Prev</button>
+          <button class="btn" id="nextBtn" type="button">Next</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- AREAS -->
+    <section id="areas">
+      <div class="container">
+        <div class="sectionHead">
+          <div>
+            <div class="kicker">Service Coverage</div>
+            <h2>Areas We Serve</h2>
+          </div>
+          <p>Based in St. Petersburg and proudly serving nearby communities.</p>
+        </div>
+
+        <div class="card">
+          <div class="cardPad">
+            <div class="chips" aria-label="Areas list">
+              <div class="chip hq"><strong>St. Petersburg</strong> • HQ</div>
+              <div class="chip"><strong>South Pasadena</strong></div>
+              <div class="chip"><strong>Pinellas Park</strong></div>
+              <div class="chip"><strong>Kenneth City</strong></div>
+              <div class="chip"><strong>Lealman</strong></div>
+              <div class="chip"><strong>West Lealman</strong></div>
+              <div class="chip"><strong>Gulfport</strong></div>
+              <div class="chip"><strong>Seminole</strong></div>
+              <div class="chip"><strong>Treasure Island</strong></div>
+              <div class="chip"><strong>Madeira Beach</strong></div>
+              <div class="chip"><strong>Bay Pines</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUPPORT / FAQ -->
+    <section id="support">
+      <div class="container">
+        <div class="sectionHead">
+          <div>
+            <div class="kicker">Common Questions</div>
+            <h2>Frequently Asked Questions</h2>
+          </div>
+          <p>Quick answers to common questions.</p>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>
+              Do you bring supplies and equipment?
+              <span class="chev" aria-hidden="true">›</span>
+            </summary>
+            <div class="ans">
+              Yes — we bring our own supplies and standard equipment. You don’t need to provide anything. If you prefer we use specific products (or avoid certain ingredients), just let us know in your quote request.
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              What are your hours?
+              <span class="chev" aria-hidden="true">›</span>
+            </summary>
+            <div class="ans">
+              We’re available 7am–8pm, Monday through Sunday.
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              What if I’m not satisfied?
+              <span class="chev" aria-hidden="true">›</span>
+            </summary>
+            <div class="ans">
+              Let us know within 24 hours and we’ll come back to re-clean the specific areas you mention.
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              Do I need to be home?
+              <span class="chev" aria-hidden="true">›</span>
+            </summary>
+            <div class="ans">
+              No — many clients provide access instructions and come back to a spotless home.
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              How do you price cleanings?
+              <span class="chev" aria-hidden="true">›</span>
+            </summary>
+            <div class="ans">
+              Pricing depends on bedrooms, bathrooms, and the home’s condition. Request a quote and we’ll confirm an accurate estimate quickly.
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              What’s your reschedule or cancellation policy?
+              <span class="chev" aria-hidden="true">›</span>
+            </summary>
+            <div class="ans">
+              If you need to reschedule, please give us as much notice as possible so we can adjust the schedule and serve everyone on time.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOK / GET STARTED -->
+    <section id="book">
+      <div class="container">
+        <div class="sectionHead">
+          <div>
+            <div class="kicker">Get Started</div>
+            <h2>Ready for a Spotless Home?</h2>
+          </div>
+          <p>Tell us a bit about your home and your cleaning needs. We’ll get back to you with a personalized quote within 24 hours. No hidden fees, just honest pricing.</p>
+        </div>
+
+        <div class="quoteGrid">
+          <div class="card">
+            <div class="cardPad">
+              <div class="steps" aria-label="Steps">
+                <span class="stepDot on"></span> 1. Service
+                <span class="stepDot"></span> 2. Details
+                <span class="stepDot"></span> 3. Estimate
+              </div>
+
+              <form id="quoteForm">
+                <label for="service">What kind of clean?</label>
+                <select id="service" name="service" required>
+                  <option value="" selected disabled>Select a service</option>
+                  <option>Regular / Maintenance</option>
+                  <option>Deep Cleaning</option>
+                  <option>Move-In / Move-Out</option>
+                  <option>Airbnb / Rentals</option>
+                  <option>Post-Construction</option>
+                </select>
+
+                <div class="formRow">
+                  <div>
+                    <label for="beds">Bedrooms</label>
+                    <select id="beds" name="beds" required>
+                      <option value="" selected disabled>Choose</option>
+                      <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="baths">Bathrooms</label>
+                    <select id="baths" name="baths" required>
+                      <option value="" selected disabled>Choose</option>
+                      <option>1</option><option>1.5</option><option>2</option><option>2.5</option><option>3+</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="formRow">
+                  <div>
+                    <label for="name">Name</label>
+                    <input id="name" name="name" placeholder="Your name" autocomplete="name" required />
+                  </div>
+                  <div>
+                    <label for="phone">Phone</label>
+                    <input id="phone" name="phone" placeholder="(###) ###-####" autocomplete="tel" required />
+                  </div>
+                </div>
+
+                <div class="formRow">
+                  <div>
+                    <label for="zip">Zip Code</label>
+                    <input id="zip" name="zip" placeholder="33701" inputmode="numeric" required />
+                  </div>
+                  <div>
+                    <label for="preferred">Preferred timing</label>
+                    <select id="preferred" name="preferred">
+                      <option>As soon as possible</option>
+                      <option>This week</option>
+                      <option>Next week</option>
+                      <option>Flexible</option>
+                    </select>
+                  </div>
+                </div>
+
+                <label for="notes">Notes (optional)</label>
+                <textarea id="notes" name="notes" placeholder="Pets, special requests, parking/access notes, etc."></textarea>
+
+                <div class="formActions">
+                  <button class="btn" type="reset">Reset</button>
+                  <button class="btn primary" type="submit">Next Step</button>
+                </div>
+
+                <div class="notice" id="formNote">
+                  This demo form doesn’t send anywhere yet. If you want, tell me what booking system you use (Tally, Calendly, Housecall Pro, etc.) and I’ll wire it up.
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="cardPad">
+              <div class="miniList">
+                <div class="miniItem"><span class="icon" aria-hidden="true">🌿</span> <div><b>Eco-friendly products</b><br/>Fresh clean without harsh smells.</div></div>
+                <div class="miniItem"><span class="icon" aria-hidden="true">🛡️</span> <div><b>Bonded &amp; insured</b><br/>Peace of mind every visit.</div></div>
+                <div class="miniItem"><span class="icon" aria-hidden="true">✨</span> <div><b>Satisfaction Guarantee</b><br/>24-hour reclean if anything’s missed.</div></div>
+              </div>
+
+              <div style="margin-top:14px;border-top:1px solid var(--line);padding-top:14px;">
+                <div class="kicker">Contact</div>
+                <div style="margin-top:8px;color:var(--muted);font-weight:800;">
+                  support@homecleaningco.com<br/>
+                  (954) 393-3479
+                </div>
+                <div style="margin-top:12px;">
+                  <a class="btn primary" href="#top" style="width:100%;">Back to Top</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footGrid">
+        <div>
+          <div class="brand">
+            <span class="logoDot" aria-hidden="true"></span>
+            <span>Home Cleaning &amp; Co</span>
+          </div>
+          <p class="muted" style="font-weight:650;margin:10px 0 0;">
+            Reliable home services at your fingertips. Professional, vetted, and always on time.
+          </p>
+          <div class="copyright">© 2026 Home Cleaning &amp; Co. All rights reserved.</div>
+        </div>
+
+        <div>
+          <div class="footLinks" aria-label="Quick Links">
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#areas">Areas</a>
+            <a href="#book">Book Now</a>
+          </div>
+          <div style="margin-top:10px;color:var(--muted);font-weight:800;font-size:13px;">
+            support@homecleaningco.com<br/>
+            (954) 393-3479
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for in-page anchors
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href');
+        if (!id || id === '#') return;
+        const el = document.querySelector(id);
+        if (!el) return;
+        e.preventDefault();
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // close drawer on mobile
+        closeDrawer();
+      });
+    });
+
+    // Mobile drawer
+    const overlay = document.getElementById('drawerOverlay');
+    const openBtn = document.getElementById('openDrawer');
+    const closeBtn = document.getElementById('closeDrawer');
+
+    function openDrawer(){
+      overlay.style.display = 'flex';
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer(){
+      overlay.style.display = 'none';
+      overlay.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+    openBtn?.addEventListener('click', openDrawer);
+    closeBtn?.addEventListener('click', closeDrawer);
+    overlay?.addEventListener('click', (e) => {
+      if (e.target === overlay) closeDrawer();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeDrawer();
+    });
+
+    // Testimonials slider
+    const track = document.getElementById('track');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const slides = track ? Array.from(track.children) : [];
+    let idx = 0;
+
+    function go(n){
+      if (!track || slides.length === 0) return;
+      idx = (n + slides.length) % slides.length;
+      track.style.transform = `translateX(${-idx * 100}%)`;
+    }
+    prevBtn?.addEventListener('click', () => go(idx - 1));
+    nextBtn?.addEventListener('click', () => go(idx + 1));
+    // auto-advance
+    setInterval(() => { if (document.visibilityState === 'visible') go(idx + 1); }, 6500);
+
+    // Demo form submit
+    const form = document.getElementById('quoteForm');
+    const note = document.getElementById('formNote');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const service = data.get('service') || '';
+      const beds = data.get('beds') || '';
+      const baths = data.get('baths') || '';
+      note.textContent =
+        `Got it — ${service} for ${beds} bed / ${baths} bath. This is a demo (no backend). Tell me where you want submissions to go (email, Tally, Google Forms, webhook, etc.) and I’ll hook it up.`;
+      note.scrollIntoView({ behavior:'smooth', block:'nearest' });
+    });
+  </script>
 </body>
 </html>
