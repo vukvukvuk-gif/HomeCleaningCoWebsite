@@ -108,6 +108,18 @@
 
   <style>
     html { scroll-behavior: smooth; }
+
+    /* ✅ GUARANTEED: Force emerald color everywhere (works even if Tailwind CDN ignores config) */
+    .bg-emerald-600 { background-color: #99c0b8 !important; }
+    .hover\:bg-emerald-700:hover { background-color: #84b0a7 !important; }
+
+    .text-emerald-600 { color: #99c0b8 !important; }
+    .text-emerald-700 { color: #84b0a7 !important; }
+
+    .bg-emerald-600\/10 { background-color: rgb(153 192 184 / 0.10) !important; }
+    .bg-emerald-600\/15 { background-color: rgb(153 192 184 / 0.15) !important; }
+
+    .border-emerald-600\/10 { border-color: rgb(153 192 184 / 0.10) !important; }
   </style>
 </head>
 
