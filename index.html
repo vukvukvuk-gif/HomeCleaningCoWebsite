@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-  <meta name="theme-color" content="#5FA37A">
+  <meta name="theme-color" content="#99c0b8">
 
   <meta name="description"
     content="Professional residential cleaning services in St. Petersburg and Tampa Bay. Licensed &amp; insured, supplies included. Get a fast quote today." />
@@ -31,28 +31,45 @@
   <meta name="twitter:description" content="Professional residential cleaning services in St. Petersburg and Tampa Bay. Licensed &amp; insured, supplies included." />
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1581578731548-c64695ce6958" />
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Rufina Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-
+  <!-- ✅ IMPORTANT: Tailwind config MUST be set BEFORE loading the CDN script -->
   <script>
+    tailwind = window.tailwind || {};
     tailwind.config = {
       theme: {
         extend: {
           colors: {
             brand: {
-              mint: '#5FA37A',
+              mint: '#99c0b8',
               blue: '#8AA7B5',
               dark: '#4A4E54',
               light: '#F8FAFB'
+            },
+            emerald: {
+              50:  '#f3f8f7',
+              100: '#e6f1ef',
+              200: '#cfe4e0',
+              300: '#b8d7d0',
+              400: '#a6cbc4',
+              500: '#99c0b8',
+              600: '#99c0b8',
+              700: '#84b0a7',
+              800: '#6f9d94',
+              900: '#5a8a80'
             }
           }
         }
       }
-    }
+    };
   </script>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
   <!-- Local Business Schema (improved) -->
   <script type="application/ld+json">
@@ -94,6 +111,24 @@
 
   <style>
     html { scroll-behavior: smooth; }
+
+    /* Rufina brand text */
+    .rufina {
+      font-family: 'Rufina', serif;
+      letter-spacing: 0.02em;
+    }
+
+    /* ✅ GUARANTEED: Force emerald color everywhere (works even if Tailwind CDN ignores config) */
+    .bg-emerald-600 { background-color: #99c0b8 !important; }
+    .hover\:bg-emerald-700:hover { background-color: #84b0a7 !important; }
+
+    .text-emerald-600 { color: #99c0b8 !important; }
+    .text-emerald-700 { color: #84b0a7 !important; }
+
+    .bg-emerald-600\/10 { background-color: rgb(153 192 184 / 0.10) !important; }
+    .bg-emerald-600\/15 { background-color: rgb(153 192 184 / 0.15) !important; }
+
+    .border-emerald-600\/10 { border-color: rgb(153 192 184 / 0.10) !important; }
   </style>
 </head>
 
@@ -111,7 +146,8 @@
             loading="eager"
             decoding="async"
           />
-          <span class="text-lg font-extrabold tracking-tight leading-none">
+          <!-- ✅ Rufina applied here -->
+          <span class="text-lg font-bold leading-none rufina">
             HOME CLEANING <span class="text-emerald-600">&amp;</span> CO
           </span>
         </div>
@@ -124,15 +160,12 @@
           <a href="#faq" class="hover:text-brand-dark transition">FAQ</a>
         </div>
 
-        <!-- CHANGED: top-right buttons -->
         <div class="flex items-center gap-3">
-          <!-- Replaced the gray/blue "Book Now" with "Get a Free Estimate" -->
           <a href="estimate.html"
              class="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 rounded-full font-extrabold transition hidden sm:inline-flex items-center gap-2 shadow-sm">
             <i class="fas fa-clipboard-list"></i> Get a Free Estimate
           </a>
 
-          <!-- Replaced the call button with another "Get a Free Estimate" button (keeps mobile-friendly spacing) -->
           <a href="estimate.html" aria-label="Get a free estimate"
              class="bg-brand-dark hover:bg-black text-white px-5 py-3 rounded-full font-extrabold transition flex items-center gap-2 shadow-sm">
             <i class="fas fa-clipboard-list"></i> Get a Free Estimate
