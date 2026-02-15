@@ -32,6 +32,9 @@
   <meta name="twitter:description" content="Professional residential cleaning services in St. Petersburg and Tampa Bay. Licensed &amp; insured, supplies included." />
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1581578731548-c64695ce6958" />
 
+  <!-- ✅ Rufina Font (added) -->
+  <link href="https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap" rel="stylesheet">
+
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -95,6 +98,12 @@
 
   <style>
     html { scroll-behavior: smooth; }
+
+    /* ✅ Rufina class (added) */
+    .rufina {
+      font-family: 'Rufina', serif;
+      letter-spacing: 0.02em;
+    }
   </style>
 </head>
 
@@ -112,7 +121,8 @@
             loading="eager"
             decoding="async"
           />
-          <span class="text-lg font-extrabold tracking-tight leading-none">
+          <!-- ✅ CHANGED: added rufina class -->
+          <span class="text-lg font-extrabold tracking-tight leading-none rufina">
             HOME CLEANING <span class="text-emerald-600">&amp;</span> CO
           </span>
         </div>
