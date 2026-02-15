@@ -1,510 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Home Cleaning &amp; Co | St. Petersburg &amp; Tampa Bay House Cleaning</title>
+  <title>Free Estimate | Home Cleaning & Co</title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-  <meta name="theme-color" content="#99c0b8">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#059669">
 
   <meta name="description"
-    content="Professional residential cleaning services in St. Petersburg and Tampa Bay. Licensed &amp; insured, supplies included. Get a fast quote today." />
+    content="Request a free cleaning estimate in St. Petersburg and nearby areas. Home Cleaning & Co — Licensed & Insured." />
 
-  <!-- Canonical (replace with your real domain once live) -->
-  <link rel="canonical" href="https://www.homecleaningco.com/" />
+  <link rel="canonical" href="https://www.homecleaningco.com/estimate.html" />
 
-  <!-- Performance: preconnect -->
-  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
-  <link rel="preconnect" href="https://tally.so" crossorigin>
-
-  <meta property="og:title" content="Home Cleaning &amp; Co" />
-  <meta property="og:description" content="Professional residential cleaning services in St. Petersburg and Tampa Bay. Get a fast quote today." />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1581578731548-c64695ce6958" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.homecleaningco.com/" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Home Cleaning &amp; Co" />
-  <meta name="twitter:description" content="Professional residential cleaning services in St. Petersburg and Tampa Bay. Licensed &amp; insured, supplies included." />
-  <meta name="twitter:image" content="https://images.unsplash.com/photo-1581578731548-c64695ce6958" />
-
-  <!-- ✅ IMPORTANT: Tailwind config MUST be set BEFORE loading the CDN script -->
-  <script>
-    tailwind = window.tailwind || {};
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              mint: '#99c0b8',
-              blue: '#8AA7B5',
-              dark: '#4A4E54',
-              light: '#F8FAFB'
-            },
-            emerald: {
-              50:  '#f3f8f7',
-              100: '#e6f1ef',
-              200: '#cfe4e0',
-              300: '#b8d7d0',
-              400: '#a6cbc4',
-              500: '#99c0b8',
-              600: '#99c0b8',
-              700: '#84b0a7',
-              800: '#6f9d94',
-              900: '#5a8a80'
-            }
-          }
-        }
-      }
-    };
-  </script>
-
-  <!-- Tailwind -->
+  <!-- Tailwind (NO color overrides) -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-
-  <!-- Local Business Schema (improved) -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "HomeAndConstructionBusiness",
-      "name": "Home Cleaning & Co",
-      "url": "https://www.homecleaningco.com/",
-      "image": "https://images.unsplash.com/photo-1581578731548-c64695ce6958",
-      "telephone": "+19543933479",
-      "email": "support@homecleaningco.com",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "St. Petersburg",
-        "addressRegion": "FL",
-        "addressCountry": "US"
-      },
-      "areaServed": [
-        "St. Petersburg, FL",
-        "Pinellas Park, FL",
-        "Gulfport, FL",
-        "Seminole, FL",
-        "Treasure Island, FL",
-        "Madeira Beach, FL",
-        "South Pasadena, FL",
-        "Kenneth City, FL"
-      ],
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-          "opens": "07:00",
-          "closes": "20:00"
-        }
-      ]
-    }
-  </script>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
   <style>
     html { scroll-behavior: smooth; }
-
-    /* ✅ GUARANTEED: Force emerald color everywhere (works even if Tailwind CDN ignores config) */
-    .bg-emerald-600 { background-color: #99c0b8 !important; }
-    .hover\:bg-emerald-700:hover { background-color: #84b0a7 !important; }
-
-    .text-emerald-600 { color: #99c0b8 !important; }
-    .text-emerald-700 { color: #84b0a7 !important; }
-
-    .bg-emerald-600\/10 { background-color: rgb(153 192 184 / 0.10) !important; }
-    .bg-emerald-600\/15 { background-color: rgb(153 192 184 / 0.15) !important; }
-
-    .border-emerald-600\/10 { border-color: rgb(153 192 184 / 0.10) !important; }
   </style>
 </head>
 
-<body class="bg-brand-light text-brand-dark overflow-x-hidden">
+<body class="bg-gray-50 text-gray-800">
 
   <!-- NAV -->
-  <nav class="sticky top-0 bg-white/95 backdrop-blur border-b border-gray-100 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-20 items-center">
-        <div class="flex items-center gap-3">
-          <img
-            src="https://cdn.grapesjs.com/workspaces/cmlh11fl670ggg8fwp7s7ecks/assets/22ee1970-587d-4e38-bfd5-6a81d39ec2e6__img3529.png"
-            alt="Home Cleaning &amp; Co logo"
-            class="h-12 md:h-12 w-auto"
-            loading="eager"
-            decoding="async"
-          />
-          <span class="text-lg font-extrabold tracking-tight leading-none">
-            HOME CLEANING <span class="text-emerald-600">&amp;</span> CO
-          </span>
-        </div>
-
-        <div class="hidden md:flex items-center gap-6 text-gray-700 font-semibold">
-          <a href="#home" class="hover:text-brand-dark transition">Home</a>
-          <a href="#services" class="hover:text-brand-dark transition">Services</a>
-          <a href="#why" class="hover:text-brand-dark transition">Why Hire Us</a>
-          <a href="#areas" class="hover:text-brand-dark transition">Areas</a>
-          <a href="#faq" class="hover:text-brand-dark transition">FAQ</a>
-        </div>
-
-        <!-- CHANGED: top-right buttons -->
-        <div class="flex items-center gap-3">
-          <a href="estimate.html"
-             class="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 rounded-full font-extrabold transition hidden sm:inline-flex items-center gap-2 shadow-sm">
-            <i class="fas fa-clipboard-list"></i> Get a Free Estimate
-          </a>
-
-          <a href="estimate.html" aria-label="Get a free estimate"
-             class="bg-brand-dark hover:bg-black text-white px-5 py-3 rounded-full font-extrabold transition flex items-center gap-2 shadow-sm">
-            <i class="fas fa-clipboard-list"></i> Get a Free Estimate
-          </a>
-        </div>
-      </div>
+  <nav class="bg-white border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="index.html" class="font-extrabold text-lg">
+        HOME CLEANING <span class="text-emerald-600">&amp;</span> CO
+      </a>
+      <a href="index.html"
+         class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-full font-bold transition">
+        Back to Home
+      </a>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <header id="home" class="relative bg-white overflow-hidden">
-    <div class="absolute inset-0 pointer-events-none">
-      <div class="absolute -top-24 -right-24 w-[420px] h-[420px] bg-emerald-600/10 blur-3xl rounded-full"></div>
-      <div class="absolute -bottom-28 -left-28 w-[520px] h-[520px] bg-brand-blue/15 blur-3xl rounded-full"></div>
-    </div>
+  <!-- FORM SECTION -->
+  <section class="py-20">
+    <div class="max-w-2xl mx-auto px-4">
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16 lg:pt-20 lg:pb-24 relative">
-      <div class="grid lg:grid-cols-2 gap-12 items-start">
+      <div class="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
 
-        <div>
-          <div class="inline-flex items-center gap-2 bg-emerald-600/10 text-emerald-700 px-4 py-2 rounded-full mb-6 border border-emerald-600/10">
-            <i class="fas fa-shield-alt text-sm"></i>
-            <span class="text-xs font-black uppercase tracking-widest">Licensed &amp; Insured • Supplies Included</span>
-          </div>
-
-          <h1 class="text-4xl md:text-6xl text-gray-900 leading-[1.05] mb-6 font-extrabold tracking-tight">
-            Sparkling Clean Homes in
-            <span class="text-brand-blue">St. Petersburg</span> &amp; Nearby Areas
-          </h1>
-
-          <p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-xl">
-            We’re a reliable local team focused on consistent results, clear communication, and a home that feels truly refreshed.
-          </p>
-
-          <div class="flex flex-col sm:flex-row gap-4 mb-8">
-            <a href="estimate.html"
-               class="flex-1 bg-emerald-600 text-white text-center py-3 rounded-2xl text-lg font-extrabold hover:bg-emerald-700 transition shadow-lg flex items-center justify-center gap-3">
-              <i class="fas fa-clipboard-list"></i> Get a Free Estimate
-            </a>
-
-            <a href="estimate.html"
-               class="flex-1 bg-brand-dark text-white text-center py-3 rounded-2xl text-lg font-extrabold hover:bg-black transition shadow-lg flex items-center justify-center gap-3">
-              <i class="fas fa-calendar-check"></i> Book Now
-            </a>
-          </div>
-
-          <div class="flex items-center gap-3 border-t pt-6 border-gray-100">
-            <div class="flex text-yellow-400" aria-label="Five star service">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            </div>
-            <span class="text-sm font-semibold text-gray-500">Trusted local service • Clear standards • Friendly team</span>
-          </div>
-        </div>
-
-        <!-- Hero gallery -->
-        <div class="grid grid-cols-2 gap-4 w-full justify-items-stretch">
-          <img
-            src="/images/living-room.jpg"
-            alt="Freshly cleaned living room"
-            class="rounded-3xl shadow-lg h-64 w-full object-cover mt-8 border border-gray-100"
-            loading="lazy"
-            decoding="async"
-          />
-          <img
-            src="/images/kitchen.jpg"
-            alt="Spotless kitchen after professional cleaning"
-            class="rounded-3xl shadow-lg h-64 w-full object-cover border border-gray-100"
-            loading="lazy"
-            decoding="async"
-          />
-          <div class="col-span-2 relative">
-            <img
-              src="/images/bathroom.jpg"
-              alt="Bathroom deep clean with shining surfaces"
-              class="rounded-3xl shadow-lg h-52 w-full object-cover border border-gray-100"
-              loading="lazy"
-              decoding="async"
-            />
-            <div class="absolute inset-0 bg-emerald-600/10 rounded-3xl"></div>
-          </div>
-        </div>
+        <iframe
+          data-tally-src="https://tally.so/embed/1A7RE1?transparentBackground=1&dynamicHeight=1&formEventsForwarding=1"
+          loading="lazy"
+          width="100%"
+          height="900"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          title="Get a free estimate"
+        ></iframe>
 
       </div>
-    </div>
-  </header>
 
-  <!-- TRUST BAR -->
-  <section class="bg-emerald-600 py-4 md:py-10">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="grid grid-cols-4 md:grid-cols-4 gap-2 md:gap-10 text-center text-white">
-        <div class="flex flex-col items-center min-w-0">
-          <i class="fas fa-shield-alt text-lg md:text-3xl mb-1 md:mb-3"></i>
-          <p class="font-extrabold text-[10px] leading-tight md:text-base">Licensed &amp; Insured</p>
-        </div>
-        <div class="flex flex-col items-center min-w-0">
-          <i class="fas fa-spray-can-sparkles text-lg md:text-3xl mb-1 md:mb-3"></i>
-          <p class="font-extrabold text-[10px] leading-tight md:text-base">Supplies Included</p>
-        </div>
-        <div class="flex flex-col items-center min-w-0">
-          <i class="fas fa-bolt text-lg md:text-3xl mb-1 md:mb-3"></i>
-          <p class="font-extrabold text-[10px] leading-tight md:text-base">Fast Quotes</p>
-        </div>
-        <div class="flex flex-col items-center min-w-0">
-          <i class="fas fa-smile text-lg md:text-3xl mb-1 md:mb-3"></i>
-          <p class="font-extrabold text-[10px] leading-tight md:text-base">Satisfaction Guaranteed</p>
-        </div>
-      </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section id="services" class="py-16 md:py-24 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center mb-14">
-        <h2 class="text-4xl font-extrabold mb-4 tracking-tight">Our Cleaning Services</h2>
-        <p class="text-gray-500 max-w-2xl mx-auto">From maintenance cleaning to deep resets — pick what fits your home.</p>
-      </div>
+  <script>
+    var d = document,
+      w = "https://tally.so/widgets/embed.js",
+      v = function () {
+        "undefined" != typeof Tally
+          ? Tally.loadEmbeds()
+          : d
+              .querySelectorAll('iframe[data-tally-src]:not([src])')
+              .forEach(function (e) {
+                e.src = e.dataset.tallySrc;
+              });
+      };
+    if ("undefined" != typeof Tally) v();
+    else if (d.querySelector('script[src="' + w + '"]') == null) {
+      var s = d.createElement("script");
+      s.src = w;
+      s.onload = v;
+      s.onerror = v;
+      d.body.appendChild(s);
+    }
+  </script>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-7 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100">
-          <i class="fas fa-broom text-4xl text-emerald-600 mb-6"></i>
-          <h3 class="text-2xl font-extrabold mb-3">Regular / Maintenance</h3>
-          <p class="text-gray-500 mb-6">Routine cleaning that keeps your home consistently fresh and comfortable.</p>
-          <ul class="text-sm font-semibold text-gray-700 space-y-2 mb-6">
-            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Dusting &amp; surfaces</li>
-            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Floors (vacuum/mop)</li>
-            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Kitchen &amp; baths</li>
-          </ul>
-          <a href="estimate.html" class="text-brand-blue font-extrabold">Get a Free Estimate <i class="fas fa-chevron-right ml-1"></i></a>
-        </div>
-
-        <div class="bg-white p-7 rounded-3xl shadow-lg border-2 border-brand-mint relative overflow-hidden">
-          <div class="absolute top-0 right-0 bg-emerald-600 text-white text-[10px] px-4 py-1 font-black uppercase">Most Popular</div>
-          <i class="fas fa-star text-4xl text-emerald-600 mb-6"></i>
-          <h3 class="text-2xl font-extrabold mb-3">Deep Cleaning</h3>
-          <p class="text-gray-500 mb-6">A detailed clean for buildup, baseboards, corners, and a true reset.</p>
-          <ul class="text-sm font-semibold text-gray-700 space-y-2 mb-6">
-            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Detail-focused</li>
-            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Heavier dusting</li>
-            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Extra touches</li>
-          </ul>
-          <a href="estimate.html" class="text-brand-blue font-extrabold">Get a Free Estimate <i class="fas fa-chevron-right ml-1"></i></a>
-        </div>
-
-        <div class="bg-white p-7 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100">
-          <i class="fas fa-truck-moving text-4xl text-emerald-600 mb-6"></i>
-          <h3 class="text-2xl font-extrabold mb-3">Move-In / Move-Out</h3>
-          <p class="text-gray-500 mb-6">Designed for transitions — start fresh or leave a spotless impression.</p>
-          <ul class="text-sm font-semibold text-gray-700 space-y-2 mb-6">
-            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Empty-home focus</li>
-            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Thorough detailing</li>
-            <li><i class="fas fa-check text-emerald-600 mr-2"></i>Fast scheduling</li>
-          </ul>
-          <a href="estimate.html" class="text-brand-blue font-extrabold">Get a Free Estimate <i class="fas fa-chevron-right ml-1"></i></a>
-        </div>
-
-        <div class="bg-white p-7 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100">
-          <i class="fas fa-key text-4xl text-emerald-600 mb-6"></i>
-          <h3 class="text-2xl font-extrabold mb-3">Airbnb / Rentals</h3>
-          <p class="text-gray-500 mb-6">Turnovers built for 5-star stays — reliable, fast, and consistent.</p>
-          <a href="estimate.html" class="text-brand-blue font-extrabold">Get a Free Estimate <i class="fas fa-chevron-right ml-1"></i></a>
-        </div>
-
-        <div class="bg-white p-7 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100">
-          <i class="fas fa-helmet-safety text-4xl text-emerald-600 mb-6"></i>
-          <h3 class="text-2xl font-extrabold mb-3">Post-Construction</h3>
-          <p class="text-gray-500 mb-6">Dust, debris, and detail cleanup after renovations or construction.</p>
-          <a href="estimate.html" class="text-brand-blue font-extrabold">Get a Free Estimate <i class="fas fa-chevron-right ml-1"></i></a>
-        </div>
-
-        <div class="bg-white p-7 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100">
-          <i class="fas fa-list-check text-4xl text-emerald-600 mb-6"></i>
-          <h3 class="text-2xl font-extrabold mb-3">Add-Ons</h3>
-          <p class="text-gray-500 mb-6">Oven, fridge, interior windows, laundry, pet hair focus, and more.</p>
-          <a href="estimate.html" class="text-brand-blue font-extrabold">Get a Free Estimate <i class="fas fa-chevron-right ml-1"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY HIRE US -->
-  <section id="why" class="py-16 md:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="grid lg:grid-cols-2 gap-12 items-start">
-        <div>
-          <h2 class="text-4xl font-extrabold mb-6 tracking-tight">Why Hire Us?</h2>
-          <p class="text-gray-600 text-lg leading-relaxed mb-8 max-w-xl">
-            Letting someone into your home is personal. Our goal is to earn trust through consistency, care, and clear communication.
-            Hire us for the service — stay with us because it feels easy.
-          </p>
-
-          <div class="space-y-4">
-            <div class="flex gap-4">
-              <div class="w-11 h-11 rounded-2xl bg-emerald-600/15 flex items-center justify-center text-emerald-600">
-                <i class="fas fa-heart"></i>
-              </div>
-              <div>
-                <p class="font-extrabold">Satisfaction-focused</p>
-                <p class="text-gray-600">If you have a concern, contact us within 24 hours and we’ll re-clean the specific areas.</p>
-              </div>
-            </div>
-
-            <div class="flex gap-4">
-              <div class="w-11 h-11 rounded-2xl bg-emerald-600/15 flex items-center justify-center text-emerald-600">
-                <i class="fas fa-shield"></i>
-              </div>
-              <div>
-                <p class="font-extrabold">Licensed &amp; insured</p>
-                <p class="text-gray-600">Professional standards with peace of mind.</p>
-              </div>
-            </div>
-
-            <div class="flex gap-4">
-              <div class="w-11 h-11 rounded-2xl bg-emerald-600/15 flex items-center justify-center text-emerald-600">
-                <i class="fas fa-spray-can-sparkles"></i>
-              </div>
-              <div>
-                <p class="font-extrabold">Supplies included</p>
-                <p class="text-gray-600">We arrive ready to clean — you don’t need to prep supplies.</p>
-              </div>
-            </div>
-
-            <div class="flex gap-4">
-              <div class="w-11 h-11 rounded-2xl bg-emerald-600/15 flex items-center justify-center text-emerald-600">
-                <i class="fas fa-comments"></i>
-              </div>
-              <div>
-                <p class="font-extrabold">Clear communication</p>
-                <p class="text-gray-600">Simple scheduling and quick responses during business hours.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="mt-10 flex flex-col sm:flex-row gap-4">
-            <a href="estimate.html" class="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-2xl font-extrabold text-center shadow-lg">
-              Get a Free Estimate
-            </a>
-          </div>
-        </div>
-
-        <div class="relative">
-          <img
-            src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1400&q=80"
-            alt="Clean kitchen after professional service"
-            class="rounded-3xl shadow-2xl w-full h-[520px] object-cover border border-gray-100"
-            loading="lazy"
-            decoding="async"
-          />
-          <div class="absolute -bottom-6 -right-6 bg-emerald-600 p-8 rounded-2xl text-white shadow-xl max-w-xs hidden lg:block">
-            <p class="italic">“We treat every home like it’s our own.”</p>
-            <p class="font-extrabold mt-2">— Home Cleaning &amp; Co</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- AREAS WE SERVE -->
-  <section id="areas" class="py-16 md:py-24 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-4xl font-extrabold mb-3 tracking-tight">Areas We Serve</h2>
-        <p class="text-gray-500 max-w-3xl mx-auto">Based in St. Petersburg and serving nearby areas.</p>
-      </div>
-
-      <div class="bg-white rounded-3xl shadow-lg border border-gray-100 p-8">
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 text-gray-700 font-semibold">
-          <div>St. Petersburg</div>
-          <div>South Pasadena</div>
-          <div>Pinellas Park</div>
-          <div>Kenneth City</div>
-          <div>Lealman</div>
-          <div>West Lealman</div>
-          <div>Gulfport</div>
-          <div>Seminole</div>
-          <div>Treasure Island</div>
-          <div>Madeira Beach</div>
-          <div>Bay Pines</div>
-        </div>
-
-        <div class="mt-6 text-sm text-gray-500">
-          Not sure if you’re in range? <a class="text-brand-blue font-extrabold underline" href="estimate.html">Request a free estimate</a> and we’ll confirm.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="py-16 md:py-24 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-4xl font-extrabold mb-3 tracking-tight">Frequently Asked Questions</h2>
-        <p class="text-gray-500 max-w-3xl mx-auto">Quick answers to common questions.</p>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-          <p class="font-extrabold text-lg">Do you bring supplies and equipment?</p>
-          <p class="text-gray-600 mt-2">Yes — we bring our own supplies and standard equipment. You don’t need to provide anything. If you prefer we use specific products (or avoid certain ingredients), just let us know in your quote request.</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-          <p class="font-extrabold text-lg">What are your hours?</p>
-          <p class="text-gray-600 mt-2">We’re available <span class="font-semibold">7am–8pm</span>, Monday through Sunday.</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-          <p class="font-extrabold text-lg">What if I’m not satisfied?</p>
-          <p class="text-gray-600 mt-2">Let us know within 24 hours and we’ll come back to re-clean the specific areas you mention.</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-          <p class="font-extrabold text-lg">Do I need to be home?</p>
-          <p class="text-gray-600 mt-2">No — many clients provide access instructions and come back to a spotless home.</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-          <p class="font-extrabold text-lg">How do you price cleanings?</p>
-          <p class="text-gray-600 mt-2">Pricing depends on bedrooms, bathrooms, and the home’s condition. Request a quote and we’ll confirm an accurate estimate quickly.</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-          <p class="font-extrabold text-lg">What’s your reschedule or cancellation policy?</p>
-          <p class="text-gray-600 mt-2">If you need to reschedule, please give us as much notice as possible so we can adjust the schedule and serve everyone on time.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="bg-gray-100 py-12 text-center">
-    <p class="font-extrabold text-brand-dark mb-2">HOME CLEANING &amp; CO</p>
-    <p class="text-gray-500 text-sm mb-3">Residential cleaning across Tampa Bay • Supplies included • Licensed &amp; insured</p>
-    <p class="text-gray-600 text-sm mb-2">
-      <a class="text-brand-blue font-extrabold underline" href="mailto:support@homecleaningco.com">support@homecleaningco.com</a>
-      •
-      <a class="text-brand-blue font-extrabold underline" href="tel:9543933479">(954) 393-3479</a>
-    </p>
-    <p class="text-gray-400 text-[10px] uppercase tracking-widest">© 2026 Home Cleaning &amp; Co. All Rights Reserved.</p>
-  </footer>
-
-  <!-- Sticky Mobile CTA -->
-  <div class="sm:hidden fixed bottom-4 left-4 right-4 z-50">
-    <div class="max-w-md mx-auto">
-      <a href="estimate.html" class="flex bg-emerald-600 hover:bg-emerald-700 text-white items-center justify-center py-3 rounded-full shadow-2xl font-black text-xl gap-3 transition">
-        <i class="fas fa-clipboard-list"></i> GET A FREE ESTIMATE
-      </a>
-    </div>
-  </div>
 </body>
 </html>
