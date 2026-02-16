@@ -103,6 +103,18 @@
       font-family: 'Rufina', serif;
       letter-spacing: 0.02em;
     }
+
+    /* ✅ White text with black outline (stroke) */
+    .text-stroke-black {
+      color: #fff;
+      -webkit-text-stroke: 1px #000;
+      /* fallback outline for browsers that ignore text-stroke */
+      text-shadow:
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+    }
   </style>
 </head>
 
@@ -133,11 +145,12 @@
           <a href="#faq" class="hover:text-brand-dark transition">FAQ</a>
         </div>
 
-        <!-- ✅ CHANGED ONLY: single phone number (replaces the two estimate buttons) -->
+        <!-- ✅ CHANGED: white box w/ black outline + white number w/ black outline -->
         <div class="flex items-center gap-3">
           <a href="tel:9543933479" aria-label="Call (954) 393-3479"
-             class="bg-brand-dark hover:bg-black text-white px-5 py-3 rounded-full font-extrabold transition flex items-center gap-2 shadow-sm">
-            <i class="fas fa-phone"></i> (954) 393-3479
+             class="bg-white border border-black px-5 py-3 rounded-full font-extrabold transition flex items-center gap-2 shadow-sm">
+            <i class="fas fa-phone text-black"></i>
+            <span class="text-stroke-black">(954) 393-3479</span>
           </a>
         </div>
       </div>
