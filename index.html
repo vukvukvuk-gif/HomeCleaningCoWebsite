@@ -31,7 +31,7 @@
   <meta name="twitter:description" content="Professional residential cleaning services in St. Petersburg and Tampa Bay. Licensed &amp; insured, supplies included." />
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1581578731548-c64695ce6958" />
 
-  <!-- ✅ Rufina Font (added) -->
+  <!-- ✅ Rufina Font -->
   <link href="https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Tailwind -->
@@ -57,7 +57,7 @@
     }
   </script>
 
-  <!-- Local Business Schema (improved) -->
+  <!-- Local Business Schema -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -98,7 +98,6 @@
   <style>
     html { scroll-behavior: smooth; }
 
-    /* ✅ Rufina class (added) */
     .rufina {
       font-family: 'Rufina', serif;
       letter-spacing: 0.02em;
@@ -133,7 +132,7 @@
           <a href="#faq" class="hover:text-brand-dark transition">FAQ</a>
         </div>
 
-        <!-- ✅ ONLY MOBILE CHANGE: smaller phone button on mobile so it fits one line -->
+        <!-- Mobile-sized phone button so it fits one line -->
         <div class="flex items-center gap-3">
           <a href="tel:9543933479" aria-label="Call (954) 393-3479"
              class="bg-white border border-black rounded-full font-extrabold transition flex items-center gap-2 shadow-sm text-black
@@ -171,7 +170,8 @@
             We’re a reliable local team focused on consistent results, clear communication, and a home that feels truly refreshed.
           </p>
 
-          <div class="flex flex-col sm:flex-row gap-4 mb-8">
+          <!-- ✅ ADDED id so sticky CTA only appears after this section is passed -->
+          <div id="heroCtas" class="flex flex-col sm:flex-row gap-4 mb-8">
             <a href="estimate.html"
                class="flex-1 bg-emerald-600 text-white text-center py-3 rounded-2xl text-lg font-extrabold hover:bg-emerald-700 transition shadow-lg flex items-center justify-center gap-3">
               <i class="fas fa-clipboard-list"></i> Get a Free Estimate
@@ -405,51 +405,19 @@
       <div class="bg-white rounded-3xl shadow-lg border border-gray-100 p-8">
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 text-gray-700 font-semibold">
 
-  <a href="house-cleaning-st-petersburg-fl.html" class="hover:underline transition">
-    St. Petersburg
-  </a>
+          <a href="house-cleaning-st-petersburg-fl.html" class="hover:underline transition">St. Petersburg</a>
+          <a href="house-cleaning-south-pasadena-fl.html" class="hover:underline transition">South Pasadena</a>
+          <a href="house-cleaning-pinellas-park-fl.html" class="hover:underline transition">Pinellas Park</a>
+          <a href="house-cleaning-kenneth-city-fl.html" class="hover:underline transition">Kenneth City</a>
+          <a href="house-cleaning-lealman-fl.html" class="hover:underline transition">Lealman</a>
+          <a href="house-cleaning-west-lealman-fl.html" class="hover:underline transition">West Lealman</a>
+          <a href="house-cleaning-gulfport-fl.html" class="hover:underline transition">Gulfport</a>
+          <a href="house-cleaning-seminole-fl.html" class="hover:underline transition">Seminole</a>
+          <a href="house-cleaning-treasure-island-fl.html" class="hover:underline transition">Treasure Island</a>
+          <a href="house-cleaning-madeira-beach-fl.html" class="hover:underline transition">Madeira Beach</a>
+          <a href="house-cleaning-bay-pines-fl.html" class="hover:underline transition">Bay Pines</a>
 
-  <a href="house-cleaning-south-pasadena-fl.html" class="hover:underline transition">
-    South Pasadena
-  </a>
-
-  <a href="house-cleaning-pinellas-park-fl.html" class="hover:underline transition">
-    Pinellas Park
-  </a>
-
-  <a href="house-cleaning-kenneth-city-fl.html" class="hover:underline transition">
-    Kenneth City
-  </a>
-
-  <a href="house-cleaning-lealman-fl.html" class="hover:underline transition">
-    Lealman
-  </a>
-
-  <a href="house-cleaning-west-lealman-fl.html" class="hover:underline transition">
-    West Lealman
-  </a>
-
-  <a href="house-cleaning-gulfport-fl.html" class="hover:underline transition">
-    Gulfport
-  </a>
-
-  <a href="house-cleaning-seminole-fl.html" class="hover:underline transition">
-    Seminole
-  </a>
-
-  <a href="house-cleaning-treasure-island-fl.html" class="hover:underline transition">
-    Treasure Island
-  </a>
-
-  <a href="house-cleaning-madeira-beach-fl.html" class="hover:underline transition">
-    Madeira Beach
-  </a>
-
-  <a href="house-cleaning-bay-pines-fl.html" class="hover:underline transition">
-    Bay Pines
-  </a>
-
-</div>
+        </div>
 
         <div class="mt-6 text-sm text-gray-500">
           Not sure if you’re in range? <a class="text-brand-blue font-extrabold underline" href="estimate.html">Request a free estimate</a> and we’ll confirm.
@@ -512,13 +480,61 @@
     <p class="text-gray-400 text-[10px] uppercase tracking-widest">© 2026 Home Cleaning &amp; Co. All Rights Reserved.</p>
   </footer>
 
-  <!-- Sticky Mobile CTA -->
-  <div class="sm:hidden fixed bottom-4 left-4 right-4 z-50">
+  <!-- Sticky Mobile CTA (kept) -->
+  <!-- ✅ CHANGED: starts hidden; appears only after you scroll past the hero CTA buttons -->
+  <div id="stickyCta" class="sm:hidden fixed bottom-4 left-4 right-4 z-50 opacity-0 pointer-events-none translate-y-3 transition-all duration-300">
     <div class="max-w-md mx-auto">
       <a href="estimate.html" class="flex bg-emerald-600 hover:bg-emerald-700 text-white items-center justify-center py-3 rounded-full shadow-2xl font-black text-xl gap-3 transition">
         <i class="fas fa-clipboard-list"></i> GET A FREE ESTIMATE
       </a>
     </div>
   </div>
+
+  <!-- ✅ JS: show sticky CTA only when hero buttons are out of view -->
+  <script>
+    (function () {
+      const heroCtas = document.getElementById('heroCtas');
+      const sticky = document.getElementById('stickyCta');
+      if (!heroCtas || !sticky) return;
+
+      const show = () => {
+        sticky.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-3');
+        sticky.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+      };
+
+      const hide = () => {
+        sticky.classList.add('opacity-0', 'pointer-events-none', 'translate-y-3');
+        sticky.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+      };
+
+      // Default hidden on load
+      hide();
+
+      // Observe the hero CTA block; when it’s not visible, show sticky CTA.
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            const entry = entries[0];
+            if (entry && entry.isIntersecting) hide();
+            else show();
+          },
+          { threshold: 0.01 }
+        );
+        io.observe(heroCtas);
+      } else {
+        // Fallback (older browsers)
+        const onScroll = () => {
+          const rect = heroCtas.getBoundingClientRect();
+          const inView = rect.bottom > 0 && rect.top < window.innerHeight;
+          if (inView) hide();
+          else show();
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll);
+        onScroll();
+      }
+    })();
+  </script>
+
 </body>
 </html>
